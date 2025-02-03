@@ -10,14 +10,14 @@ read geothermal.pro:
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `dir` | path | the directory where the data is stored, defined in the "settings/input" |
-| `firnice geotherm flux` | variable | here the geothermal flux will be stored |
+| `firnice_geotherm_flux` | variable | here the geothermal flux will be stored |
 
 read firnicebatch.pro:
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `dir` | path | the directory where the data is stored, defined in the "settings/input" |
-| `firnice batch data1` | variable (numeric) | here the metadata of the measured ice profiles are stored: Elevation, RGI-ID and max-depth  |
-| `firnice batch data2` | variable (text) | here the metadata of the measured ice profiles are stored: RGI-ID, measurement ID |
+| `firnice_batch_data1` | variable (numeric) | here the metadata of the measured ice profiles are stored: Elevation, RGI-ID and max-depth  |
+| `firnice_batch_data2` | variable (text) | here the metadata of the measured ice profiles are stored: RGI-ID, measurement ID |
 
 **Outputs**\
 See description at input
@@ -34,7 +34,7 @@ This file is read in to translate the RGI regions to the GloGEM regions (some re
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `dir` | path | the directory where the data is stored|
-| `region loop data` | variable | read in data is written here: table containing the translation between GloGEM and RGI regions |
+| `region_loop_data` | variable | read in data is written here: table containing the translation between GloGEM and RGI regions |
 
 **Outputs**
 
@@ -47,35 +47,35 @@ Before loop "regions" - information needed for starting this loop
 Reading in of pre-defined regional parameters used for regional differentiating of mass balance processes. The file contains values for: 
 * Region
 * Sub-region (sub-division in GloGEM of large RGI regions)
-* c calving ([calving model according to Oerlemans and Nick, 2005](https://doi.org/10.3189/172756405781813023))
+* c_calving ([calving model according to Oerlemans and Nick, 2005](https://doi.org/10.3189/172756405781813023))
 * Cprec0 (to match winter accumulation data)
 * c1 tolerance (related to cprec)
 * dPdz (precipitation gradient %/100m)
-* t off0 (start-value for temperature offset)
-* t offgrid (grid-based/iterative t off)
-* P threshold (minimum daily precipitation, mm/day)
-* size range (regional size range of glaciers to be evaluated).
+* t_off0 (start-value for temperature offset)
+* t_offgrid (grid-based/iterative t off)
+* P_threshold (minimum daily precipitation, mm/day)
+* size_range (regional size range of glaciers to be evaluated).
 
  **Inputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `dir` | path | the directory where the data is stored|
-| `dir region` | path | the directory where the geodetic data is stored per RGI region |
+| `dir_region` | path | the directory where the geodetic data is stored per RGI region |
 | `reanalysis` | variable (setting) | Name of the chosen reanalysis dataset |
-| `clim subregion` | variable (setting) | Only relevant for when the selected GloGEM regio covers RGI region 10, 16, or 19 (these are subdivided) |
-| `size range overwrite` | variable (setting) | setting that defines if the set size range of glaciers to be modelled in the regional parameter file should be overwritten by the manual settings |
+| `clim_subregion` | variable (setting) | Only relevant for when the selected GloGEM regio covers RGI region 10, 16, or 19 (these are subdivided) |
+| `size_range_overwrite` | variable (setting) | setting that defines if the set size range of glaciers to be modelled in the regional parameter file should be overwritten by the manual settings |
 
 **Outputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
-| `c calving` | variable | model parameter that xxxx |
-| `c prec` | variable | model parameter that xxxx |
-| `c1 tolerance` | variable | model parameter indicating a range (min,max) related to cprec |
-| `t offset` | variable | model parameter that indicates the starting value for temperature offset |
-| `toff grid` | variable | model parameter that xxx |
-| `toff grid0` | variable | model parameter that xxx The same as toff grid? |
-| `p thres` | variable | model parameter that defines per region the threshold for characterizing the drizzle days, i.e. set the P to 0mm on those days |
-| `size range` | variable | model parameter that defines which glacier sizes are modelled - used? |
+| `c_calving` | variable | model parameter that xxxx |
+| `c_prec` | variable | model parameter that xxxx |
+| `c1_tolerance` | variable | model parameter indicating a range (min,max) related to cprec |
+| `t_offset` | variable | model parameter that indicates the starting value for temperature offset |
+| `toff_grid` | variable | model parameter that xxx |
+| `toff_grid0` | variable | model parameter that xxx The same as toff grid? |
+| `p_thres` | variable | model parameter that defines per region the threshold for characterizing the drizzle days, i.e. set the P to 0mm on those days |
+| `size_range` | variable | model parameter that defines which glacier sizes are modelled - used? |
 
 **"Loop"** \
 Start (within) of loop regions
@@ -89,15 +89,15 @@ Here the geodetic mass balance data is read in, for which you define the source 
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `dir` | path | the directory where the data is stored|
-| `dir region` | path | the directory where the geodetic data is stored per RGI region |
-| `region loop data` | table | output table from "read regionbatch" |
-| `calibrate glacierspecific period` | variable (setting) | chosen period to use for the geodetic data (from input/settings) |
-| `calimb bn` | variable | 1D array to which the filtered and corrected geodetic mass balance data are written |
+| `dir_region` | path | the directory where the geodetic data is stored per RGI region |
+| `region_loop_data` | table | output table from "read regionbatch" |
+| `calibrate_glacierspecific_period` | variable (setting) | chosen period to use for the geodetic data (from input/settings) |
+| `calimb_bn` | variable | 1D array to which the filtered and corrected geodetic mass balance data are written |
 
 **Outputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
-| `calimb bn` | variable | 1D array with the filtered and corrected geodetic mass balance data |
+| `calimb_bn` | variable | 1D array with the filtered and corrected geodetic mass balance data |
 
 **"Loop"** \
 Before loop "Calibration phase" - preparing the calibration loop
@@ -112,17 +112,17 @@ Reanalysis products available: (1) ERA-5-Land (2) ERA -5-Reanalysis (3) Chelsea 
 **Inputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
-| `dir clim` | path | the directory where all the climate data is stored|
-| `dir region` | path | the directory in which the region is defined |
+| `dir_clim` | path | the directory where all the climate data is stored|
+| `dir_region` | path | the directory in which the region is defined |
 | `reanalysis` | variable (setting) | Name of the chosen reanalysis dataset |
 | `gxs`,`gxy`  | variable | Grid coordinates (x,y). Takes it from the meteo data file name, specified by the grids that include glaciers  |
-| `p thres` | variable | Regional precipitation threshold to set "drizzle days" (days with little precipitation) to zero, e.g. 0.5 mm/d is 0 mm.d to avoid continuous precipitation |
+| `p_thres` | variable | Regional precipitation threshold to set "drizzle days" (days with little precipitation) to zero, e.g. 0.5 mm/d is 0 mm.d to avoid continuous precipitation |
 
 **Outputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `temp` | variable | 1D array with the daily/monthly* temperature timeseries read from the input file [degrees] (length = nrow (input file)) |
-| `prec orig` | variable | 1D array with the daily/monthly* precipitation timeseries read from the input file [mm/t] (length = nrow (input file))|
+| `prec_orig` | variable | 1D array with the daily/monthly* precipitation timeseries read from the input file [mm/t] (length = nrow (input file))|
 | `prec` | variable | 1D array with the drizzle corrected daily/monthly* precipitation timeseries read from the input file [mm/t] and consequently corrected (length = nrow (input file))|
 | `dtdz` | variable | 1D array with the lapse rates read in from input file [\delta degrees/100m] (length = nrow (input file)) |
 | `ryear` | variable | 1D array with the years (length = nrow (input file))  |
@@ -141,11 +141,11 @@ Reads in the GCM data (future climate projections) according to the "GCM loop" b
 **Inputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
-| `dir clim` | path | the directory where all the climate data is stored|
+| `dir_clim` | path | the directory where all the climate data is stored|
 | `GCMdata` | variable (setting) | type of GCM data, e.g. CMIP6daily, CMIP5|
-| `dir region` | path | the directory in which the region is defined |
-| `GCM model` | variable (setting) | Selection of the GCM models to be run |
-| `GCM rcp` | variable (setting) | Selection of the emission scenarios to be run, e.g. ssp126 |
+| `dir_region` | path | the directory in which the region is defined |
+| `GCM_model` | variable (setting) | Selection of the GCM models to be run |
+| `GCM_rcp` | variable (setting) | Selection of the emission scenarios to be run, e.g. ssp126 |
 | `gcms` | counter | value that indicates the loop number of the gcm loop |
 | `rcps` | counter | value that indicates the loop number of the rcp loop |
 | `rmid` | variable | defining the midpoint of the current (loop) past climate grid, used to look for the closest gcm point. Lat, Lon are calculated based on Lat0 and Lon0 and the gridstep|
@@ -155,9 +155,9 @@ Reads in the GCM data (future climate projections) according to the "GCM loop" b
 |----------------|----------------|----------------|
 | `tempgcm` | variable | 1D array with the daily/monthly* temperature timeseries read from the input file gcm [degrees] (length = nrow (input file)) |
 | `precgcm` | variable | 1D array with the daily/monthly* precipitation timeseries read from the input file gcm [mm/t] (length = nrow (input file))|
-| `gcm year` | variable | 1D array with the years (length = nrow (input gcm file))|
-| `gcm month` | variable | 1D array with the months (length = nrow (input gcm file)) |
-| `gcm day` | variable | 1D array with the days (DOY) (length = nrow (input gcm file))  |
+| `gcm_year` | variable | 1D array with the years (length = nrow (input gcm file))|
+| `gcm_month` | variable | 1D array with the months (length = nrow (input gcm file)) |
+| `gcm_day` | variable | 1D array with the days (DOY) (length = nrow (input gcm file))  |
 
 **"Loop"** \
 Just before glacier loop, in end of "grid" loop
@@ -173,18 +173,18 @@ The path to the glacier specific hypsometry file is defined just before the call
 | `fn` | filename | filename of the hypsometry file |
 | `gg` | variable | list of glaciers to be run|
 | `g` | counter | indication which glacier to read in|
-| `a gl` | variable | area of the respective glacier |
+| `a_gl` | variable | area of the respective glacier |
 | `nb` | variable | number of elevation bands for the respective glacier|
 | `advance` | variable (setting) | setting indicating if glaciers can advance ("y") or not |
-| `adv calving` | variable (setting) | setting that indicates the terminal elevation of the glacier bed |
-| `adv addband` | variable (setting) | setting that initializes the number of bands that should be added |
+| `adv_calving` | variable (setting) | setting that indicates the terminal elevation of the glacier bed |
+| `adv_addband` | variable (setting) | setting that initializes the number of bands that should be added |
 | `hmin` | variable | the minimum elevation of the glacier from the "thick" file |
 
 **Outputs**
 | Name       | Type      | Content      |
 |----------------|----------------|----------------|
 | `da` | variable | 1D array with the daily/monthly* temperature timeseries read from the input file gcm [degrees] (length = nrow (input file)) |
-| `adv addband` | variable | the actual number of bands that are added |
+| `adv_addband` | variable | the actual number of bands that are added |
 
 **"Loop"** \
 Within the calibration loop for the glacier specific loop
