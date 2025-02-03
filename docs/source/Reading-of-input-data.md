@@ -3,7 +3,7 @@
 ## Read geothermal/read firnicebatch
 
 **Description** \
-If one wants to model ice or firn temperatures in GloGEM, these procedures read in the corresponding data. If in settings "firnice temperature" equals "y(es)", the geothermal flux is read in. The geothermal heat flux is a global dataset at 0.5° resolution (geothermal flux.grid), derived from (xxxxx). The procedure reads in the gridded data and assigns coordinates. In addition, there is the option to read in a list of glaciers for which ice temperature profiles are available (xx) through the read firnicebatch, if the settings "firnice batch" equals "y" is true. The read in of the ice temperature profiles occurs xxxxx
+If one wants to model ice or firn temperatures in GloGEM, these procedures read in the corresponding data. If in settings "firnice temperature" equals "y(es)", the geothermal flux is read in. The geothermal heat flux is a global dataset at 0.5° resolution (geothermal flux.grid), derived from (xxxxx). The procedure reads in the gridded data and assigns coordinates. In addition, there is the option to read in a list of glaciers for which ice temperature profiles are available (~ 300 profiles) through the read firnicebatch, if the settings "firnice batch" equals "y" is true. The read in of the ice temperature profiles occurs xxxxx
 
 **Inputs** \
 read geothermal.pro:
