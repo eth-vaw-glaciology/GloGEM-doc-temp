@@ -53,7 +53,7 @@ Raw files:
 
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/files/**
 
-### Ch2018 (DAILY) (XXXX)
+### Ch2018 (DAILY) (1981-XXXX)
 
 **This dataset contains one series for the past and future.** The ****CH2018 Reanalysis Data**** is a climate dataset developed for Switzerland as part of the CH2018 Climate Change Scenarios. It provides ****high-resolution (daily, 2 km grid)**** reanalysis and projection data for temperature, precipitation, and other meteorological variables. The dataset is based on historical climate observations combined with reanalysis data and downscaled using regional climate models. It is specifically designed to assess climate change impacts in Switzerland, supporting research in hydrology, agriculture, and ecosystem studies. 
 
@@ -81,15 +81,54 @@ Raw files:
 
 
 
-## Future - GCM
-### CMIP6
-This folder contains CMIP6 **monthly data** of 17 GCMs. There are stored in .nc (raw data) and .mdi (modified format for the monthly version of GloGEM). 
-### CMIP6_Daily
+
+## Future
+
+### CMIP6 - ISIMIP3b (DAILY)
+
+The ISIMIP3b framework utilizes five **GCMs from CMIP6** to provide climate projections for impact assessments. These models include **GFDL-ESM4** (developed by NOAA, strong in ocean and land-atmosphere interactions), **IPSL-CM6A-LR** (from France, focused on cloud physics and tropical climate simulations), **UKESM1-0-LL** (from the UK Met Office, known for high climate sensitivity and Earth system interactions), **MRI-ESM2-0** (from Japan, with advanced aerosol interactions and monsoon simulation), and **MPI-ESM1-2-HR** (from Germany, known for accurate representation of large-scale atmospheric circulation). These models cover a broad range of climate sensitivities and regional climate responses, ensuring robust climate impact projections. They are widely used for studying hydrology, agriculture, biodiversity, and extreme weather events in ISIMIP3b.
+
+Files to be directly used by GloGEM:
+
+**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6isimip3b/[regions]**
+
+Raw files:
+
+**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6isimip3b/files/**
+
+### CMIP6_Daily (DAILY)
+
 This folder contains CMIP6 **daily data** of 26 GCMs. There are stored in .dat files containing the temperature and precipitation for each grid cell of a specific region (e.g., Alaska) along with a timestamp starting from 1 January 1850 and running until 2100. 
+
+Files to be directly used by GloGEM:
+
+**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/[regions]**
+
+Raw files:
+
+**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/files/**
+
+
+
+
+
+
+
+
+
+### CMIP6 
+
+This folder contains CMIP6 **monthly data** of 17 GCMs. There are stored in .nc (raw data) and .mdi (modified format for the monthly version of GloGEM). 
+
+
 ### GMIP3
+
 This folder contains CMIP6 **monthly data** of 5 GCMs that were used for the GMIP3 simulations. The data is directly provided in .mdi files. 
+
 ### long_CMIP6
+
 This folder contains CMIP6 **monthly data** of 11 GCMs. There are stored in .mdi (modified format for the monthly version of GloGEM).
+
 
 
 
