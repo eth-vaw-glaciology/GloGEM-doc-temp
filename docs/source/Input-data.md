@@ -65,7 +65,7 @@ Raw files:
 
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/files/**
 
-### ERA5 (MONTHLY)
+### ERA5 (MONTHLY) (1950-2019)
 
 **ERA5** is a global atmospheric reanalysis dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF) under the Copernicus Climate Change Service (C3S). It provides hourly climate and weather data at a **31 km spatial resolution**, covering the period from **1950 to the present**. ERA5 includes a wide range of atmospheric, land, and oceanic variables such as temperature, precipitation, wind, humidity, and radiation. It is based on data assimilation from satellite and in-situ observations, combined with a numerical weather prediction model. The dataset is widely used in climate research, weather analysis, hydrology, renewable energy, and environmental monitoring. Compared to its predecessor (ERA-Interim), For GloGEM, we have ERA5 data avialable at **monthly resolution**. 
 
