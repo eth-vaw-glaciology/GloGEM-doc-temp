@@ -13,7 +13,7 @@ In general, the climate data is stored in:
 
 In this folder, different data products are stored:
 
-## Reanalysis
+## Reanalysis (1 TB)
 
 This folder contains all the data for the historical period. There are two options: daily and monthly. 
 
@@ -23,11 +23,11 @@ This folder contains all the data for the historical period. There are two optio
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/era5land/[regions]**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/era5land/[regions]**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/era5land/files/**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/era5land/files/**
 
 ### GSWP3-W5E5 (DAILY) (1901-2019)
 
@@ -35,11 +35,11 @@ Raw files:
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/[regions]**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/gswp3w5e5/[regions]**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/files/**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/gswp3w5e5/files/**
 
 ### Chelsa-W5E5 (DAILY) (1979-2016)
 
@@ -47,11 +47,11 @@ Raw files:
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/[regions]**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/chelsaw5e5/[regions]**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/files/**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/chelsaw5e5/files/**
 
 ### Ch2018 (DAILY) (1981-XXXX)
 
@@ -59,11 +59,11 @@ Raw files:
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/[models]**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/CH2018/[models]**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/files/**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/daily/CH2018/files/**
 
 ### ERA5 (MONTHLY) (1950-2019)
 
@@ -73,11 +73,11 @@ Please note that the monthly climate data is stored in a different structure as 
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/monthly/ERA5/[regions]**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/monthly/ERA5/[regions]**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/reanalysis/monthly/ERA5/files/**
+**/itet-stor/[username]/glogem/climatedata/reanalysis/monthly/ERA5/files/**
 
 
 
@@ -90,11 +90,13 @@ The ISIMIP3b framework utilizes five **GCMs from CMIP6** to provide climate proj
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6isimip3b/[regions]**
+**/itet-stor/[username]/glogem/climatedata/future/daily/cmip6isimip3b/[regions]**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6isimip3b/files/**
+**/itet-stor/[username]/glogem/climatedata/future/daily/cmip6isimip3b/files/**
+
+>> scp -r /scratch-third/lvantrich/cmip6/isimip3/* /itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6isimip3b/files/
 
 ### CMIP6_Daily (DAILY)
 
@@ -102,11 +104,15 @@ This folder contains CMIP6 **daily data** of 26 GCMs. There are stored in .dat f
 
 Files to be directly used by GloGEM:
 
-**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/[regions]**
+**To be created?**
 
 Raw files:
 
-**/itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/files/**
+**/itet-stor/[username]/glogem/climatedata/future/daily/cmip6/files/**
+
+>> scp -r /scratch-third/lvantrich/cmip6/gcms/daily/*/ /itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/files/
+
+
 
 
 
