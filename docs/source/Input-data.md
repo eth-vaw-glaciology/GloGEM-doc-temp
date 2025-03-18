@@ -98,7 +98,7 @@ Raw files:
 
 >> scp -r /scratch-third/lvantrich/cmip6/isimip3/* /itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6isimip3b/files/
 
-### CMIP6_Daily (DAILY)
+### CMIP6 Daily (DAILY)
 
 This folder contains CMIP6 **daily data** of 26 GCMs. There are stored in .dat files containing the temperature and precipitation for each grid cell of a specific region (e.g., Alaska) along with a timestamp starting from 1 January 1850 and running until 2100. 
 
