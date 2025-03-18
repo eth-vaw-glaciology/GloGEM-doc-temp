@@ -2,6 +2,8 @@
  
 ## Get a local copy of the repository
 
+whatever...
+
 This step creates a local copy of the repository in the folder where you are. 
 ```
 $ git clone https://github.com/sdrocer/GloGEM.git
