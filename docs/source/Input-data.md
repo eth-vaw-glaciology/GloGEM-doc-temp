@@ -23,6 +23,7 @@ This folder contains all the data for the historical period. There are two optio
 
 Files to be directly used by GloGEM:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/era5land/[regions]**
+
 Raw files:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/era5land/files/**
 
@@ -32,6 +33,7 @@ Raw files:
 
 Files to be directly used by GloGEM:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/[regions]**
+
 Raw files:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/files/**
 
@@ -41,6 +43,7 @@ Raw files:
 
 Files to be directly used by GloGEM:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/[regions]**
+
 Raw files:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/files/**
 
@@ -50,6 +53,7 @@ Raw files:
 
 Files to be directly used by GloGEM:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/[models]**
+
 Raw files:
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/files/**
 
