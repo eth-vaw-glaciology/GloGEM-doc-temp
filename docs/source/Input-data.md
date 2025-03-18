@@ -6,13 +6,10 @@ Explanations can be given by L.V.T. and A.V.D.E.
 
 ## Climate data
 
-GloGEM requires climate data, temperature and precipitation, to be run. 
+GloGEM requires climate data for the past (the historical period) and the future. In the standard setup, the models uses reanalysis data for the past climate and global climate model (GCM) output for the future. 
 
-## Climate data
-
-GloGEM requires climate data for the past (the historical period) and the future. In the standard setup, the models uses reanalysis data for the past climate and global climate model (GCM) output for the future. In general, the climate data is stored in:
-
-_**/scratch_net/vierzack04_fourth/mhuss/klima/**_
+In general, the climate data is stored in:
+**/itet-stor/[username]/glogem/climatedata/**
 
 In this folder, different data products are stored:
 
