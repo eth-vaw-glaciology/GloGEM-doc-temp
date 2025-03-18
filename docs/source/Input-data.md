@@ -41,7 +41,7 @@ Raw files:
 
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/files/**
 
-### Chelsa-W5e5 (DAILY) (1979-2016)
+### Chelsa-W5E5 (DAILY) (1979-2016)
 
 **CHELSA-W5E5** is a **high-resolution** climate dataset that combines CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas) with the W5E5 (WATCH + WFDE5) meteorological forcing dataset. It provides bias-corrected, **high-resolution (up to 1 km)** climate data. The dataset covers key meteorological variables such as temperature and precipitation, offering improved spatial detail over standard reanalysis datasets. By merging CHELSA's fine-scale topographic corrections with W5E5’s historical consistency, it ensures more accurate climate information, especially in mountainous and complex terrain. It is widely used for biodiversity research, ecosystem modeling, and climate risk assessments.
 
