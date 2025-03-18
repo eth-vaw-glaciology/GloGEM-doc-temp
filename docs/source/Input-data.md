@@ -122,16 +122,16 @@ Raw files:
 
 
 
-### CMIP6 
+### CMIP6 Monthly
 
 This folder contains CMIP6 **monthly data** of 17 GCMs. There are stored in .nc (raw data) and .mdi (modified format for the monthly version of GloGEM). 
 
 
-### GMIP3
+### GMIP3 Monthly
 
 This folder contains CMIP6 **monthly data** of 5 GCMs that were used for the GMIP3 simulations. The data is directly provided in .mdi files. 
 
-### long_CMIP6
+### CMIP6 LONG Monthly
 
 This folder contains CMIP6 **monthly data** of 11 GCMs. There are stored in .mdi (modified format for the monthly version of GloGEM).
 
