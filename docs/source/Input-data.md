@@ -2,7 +2,7 @@
 
 GloGEM relies on various input datasets essential for glacier modelling, including ice thickness, geodetic mass balance, and climate data. Below, we provide a list of the data(sets) required by the model, along with their storage locations as of March 18, 2025. To date, these are only accessible for ETH VAW members, but they will be stored on public servers in the (near) future. 
 
-Explanations can be given by L.V.T. and A.V.D.E.
+Explanations can be given by L.V.T. and A.V.D.E. and M.H.
 
 ## Climate data
 
