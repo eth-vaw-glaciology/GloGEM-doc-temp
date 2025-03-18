@@ -22,9 +22,11 @@ This folder contains all the data for the historical period. There are two optio
 **ERA5-Land** is a global **high-resolution** land surface dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF) as part of the Copernicus Climate Change Service (C3S). It provides hourly data on land surface variables at a **9 km spatial resolution**, making it a valuable resource for studying climate and environmental changes. For GloGEM, we have prepared the data in daily format. 
 
 Files to be directly used by GloGEM:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/era5land/[regions]**
 
 Raw files:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/era5land/files/**
 
 ### GSWP3-W5E5 (DAILY) (1901-2019)
@@ -32,9 +34,11 @@ Raw files:
 **GSWP3-W5E5** is a global meteorological forcing dataset used for land surface and climate impact modeling. It merges **GSWP3** (1901–2010) and **W5E5** (1979–2019), providing **low-resolution (~0.5°)** bias-corrected climate data. It includes temperature and precipitation. Widely used in ISIMIP and Earth system models, it supports research on climate change impacts, water cycles, and land surface processes.
 
 Files to be directly used by GloGEM:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/[regions]**
 
 Raw files:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/gswp3w5e5/files/**
 
 ### Chelsa-W5e5 (DAILY) (1979-2016)
@@ -42,9 +46,11 @@ Raw files:
 **CHELSA-W5E5** is a **high-resolution** climate dataset that combines CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas) with the W5E5 (WATCH + WFDE5) meteorological forcing dataset. It provides bias-corrected, **high-resolution (up to 1 km)** climate data. The dataset covers key meteorological variables such as temperature and precipitation, offering improved spatial detail over standard reanalysis datasets. By merging CHELSA's fine-scale topographic corrections with W5E5’s historical consistency, it ensures more accurate climate information, especially in mountainous and complex terrain. It is widely used for biodiversity research, ecosystem modeling, and climate risk assessments.
 
 Files to be directly used by GloGEM:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/[regions]**
 
 Raw files:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/chelsaw5e5/files/**
 
 ### Ch2018 (DAILY) (XXXX)
@@ -52,9 +58,11 @@ Raw files:
 **This dataset contains one series for the past and future.** The ****CH2018 Reanalysis Data**** is a climate dataset developed for Switzerland as part of the CH2018 Climate Change Scenarios. It provides ****high-resolution (daily, 2 km grid)**** reanalysis and projection data for temperature, precipitation, and other meteorological variables. The dataset is based on historical climate observations combined with reanalysis data and downscaled using regional climate models. It is specifically designed to assess climate change impacts in Switzerland, supporting research in hydrology, agriculture, and ecosystem studies. 
 
 Files to be directly used by GloGEM:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/[models]**
 
 Raw files:
+
 **/itet-stor/lvantrich/glogem/climatedata/reanalysis/daily/CH2018/files/**
 
 ### ERA5 (MONTHLY)
