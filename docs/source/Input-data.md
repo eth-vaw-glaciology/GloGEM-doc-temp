@@ -104,6 +104,8 @@ Files to be directly used by GloGEM:
 
 **/itet-stor/[username]/glogem/climatedata/future/daily/cmip6/[regions]**
 
+scp -r /scratch-fourth/mhuss/klima/CMIP6_daily/* ../../../../itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/
+
 Raw files:
 
 **/itet-stor/[username]/glogem/climatedata/future/daily/cmip6/files/**
