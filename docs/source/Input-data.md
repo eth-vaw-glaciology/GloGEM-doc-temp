@@ -102,14 +102,11 @@ This folder contains CMIP6 **daily data** of 26 GCMs. There are stored in .dat f
 
 Files to be directly used by GloGEM:
 
-**To be created?**
+**/itet-stor/[username]/glogem/climatedata/future/daily/cmip6/[regions]**
 
 Raw files:
 
 **/itet-stor/[username]/glogem/climatedata/future/daily/cmip6/files/**
-
->> scp -r /scratch-third/lvantrich/cmip6/gcms/daily/*/ /itet-stor/lvantrich/glogem/climatedata/future/daily/cmip6/files/
-
 
 
 
