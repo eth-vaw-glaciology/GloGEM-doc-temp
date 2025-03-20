@@ -110,18 +110,20 @@ Raw files:
 
 **/itet-stor/[username]/glogem/climatedata/future/daily/cmip6/files/**
 
-
-
-
-
-
-
-
-
-
 ### CMIP6 Monthly
 
-This folder contains CMIP6 **monthly data** of 17 GCMs. There are stored in .nc (raw data) and .mdi (modified format for the monthly version of GloGEM). 
+This folder contains CMIP6 **monthly data** of 17 GCMs. There are stored in .mdi (modified format for the monthly version of GloGEM). 
+
+Files to be directly used by GloGEM:
+
+**/itet-stor/[username]/glogem/climatedata/future/monthly/cmip6/[regions]**
+
+
+
+
+
+
+
 
 
 ### GMIP3 Monthly
