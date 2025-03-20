@@ -118,6 +118,12 @@ Files to be directly used by GloGEM:
 
 **/itet-stor/[username]/glogem/climatedata/future/monthly/cmip6/[regions]**
 
+### CMIP6 LONG Monthly
+
+This folder contains CMIP6 **monthly data** of 11 GCMs. There are stored in .mdi (modified format for the monthly version of GloGEM).
+
+**/itet-stor/[username]/glogem/climatedata/future/monthly/longcmip6/[regions]**
+
 
 
 
@@ -130,9 +136,6 @@ Files to be directly used by GloGEM:
 
 This folder contains CMIP6 **monthly data** of 5 GCMs that were used for the GMIP3 simulations. The data is directly provided in .mdi files. 
 
-### CMIP6 LONG Monthly
-
-This folder contains CMIP6 **monthly data** of 11 GCMs. There are stored in .mdi (modified format for the monthly version of GloGEM).
 
 
 
