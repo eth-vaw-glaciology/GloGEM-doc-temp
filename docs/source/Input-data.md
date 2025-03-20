@@ -124,18 +124,11 @@ This folder contains CMIP6 **monthly data** of 11 GCMs. There are stored in .mdi
 
 **/itet-stor/[username]/glogem/climatedata/future/monthly/longcmip6/[regions]**
 
-
-
-
-
-**I am here**
-
-
-
 ### GMIP3 Monthly
 
 This folder contains CMIP6 **monthly data** of 5 GCMs that were used for the GMIP3 simulations. The data is directly provided in .mdi files. 
 
+**/itet-stor/[username]/glogem/climatedata/future/monthly/gmip3/[regions]**
 
 
 
