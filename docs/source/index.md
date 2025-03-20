@@ -52,6 +52,5 @@ Writing-of-the-output.md
 :caption: Contribution
 
 Contribution.md
-Core-GloGEM-developer-meeting.md
 Git-workflow.md
 ```
