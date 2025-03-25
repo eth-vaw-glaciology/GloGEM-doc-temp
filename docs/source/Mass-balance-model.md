@@ -55,11 +55,38 @@ Within loop 14, meltmodel '1'
 
 ## Firnicetemperature
 
+### Description
 Firn ice temperatures in GloGEM are computed for each elevation band and vertical layer using heat conduction.
 
 $$
+\begin{equation}
 \frac{\delta T_{i,m}}{\delta t} = \frac{1}{c_{h}\cdot\rho}\frac{\delta}{\delta z}\left(\kappa\frac{\delta T_{i,m}}{\delta z}\right)
+\end{equation}
 $$
+
+where $c_{h}$ is the heat capacity of ice, $\kappa$ is the thermal conductivity and $\rho$ the firn/ice density. The temperature of the uppermost layer, $T_{i,m}$, is assumed to equal the monthly mean air temperature. To reduce computational, costs, the model's resolution decreases with depth where temperature fluctuations are assumed to be minimal: 1 m for the uppermost 10 m, 5 m for the next 50 m, and 20 m for the following 200 m. At the lower boundary, a geothermal heat flux is applied based on a gridded data product by Lucazeau (2019).
+
+Refreezing and the associated latent heat transfer from percolating water follow the previously described scheme. However, before entering the ice, the water input is reduced, as ice is considered mostly impermeable. However, we assume that in heavily crevassed areas, permeability increases sufficiently to impact the englacial temperature, as fractures provide pathways for liquid water infiltration. Crevassed regions are approximated by calculating velocity gradients. In a first step, the horizontal velocity of ice, $u_i$, is calculated using the Shallow Ice Approximation:
+
+$$
+\begin{equation}
+u_i = \frac{2A}{n+1} \left( \rho g \sin \theta_i \right)^n H_i^{n+1}
+\end{equation}
+$$
+
+where $A$ is the flow rate factor, which depends on the ice temperature, and $n$ is the Glen's flow law exponent. The terms $\rho$ and $g$ denote the ice density and gravitational acceleration, respectively. The surface slope is given by $\sin \theta_i$, and $H_i$ represents the ice thickness. This formulation captures the deformation of ice under its own weight, driven by the surface slope and the thickness of the ice.
+
+The velocity gradient $\nabla_{u}$ is computed using finite differences and subsequently normalized as follows:
+
+$\nabla_{u,\text{normalized}} = \frac{\nabla_{u} - \min(\nabla_{u})}{\max(\nabla_{u}) - \min(\nabla_{u})}$.
+
+Positive velocity gradients serve as a proxy for extension and, consequently, crevassing, which is then used to compute a permeability factor governing the amount of liquid water entering the ice. The step-by-step computations for Great Aletschgletscher are shown in this example figure, illustrating the progression from ice velocities to velocity gradients and ultimately to the derived permeability factor. Note that the original factor, which ranges between 0 and 1, is halved, limiting the maximum permeability to 50%, as fully permeable ice is not expected.
+
+![Glacier profiles displaying the computed outputs of the ice permeability model per elevation band for Great Aletschgletscher. From left to right: ice velocities, velocity gradients, and the resulting permeability Pice in percent.](images/perm_model_outputs.png)
+
+### Inputs
+
+### Outputs
 
 ## Adapting snow reservoir
 
