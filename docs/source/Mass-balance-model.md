@@ -55,6 +55,14 @@ Within loop 14, meltmodel '1'
 
 ## Firnicetemperature
 
+Firnice temperatures of each layer within GloGEM are computed on the basis of heat conduction
+
+$$
+\begin{equation}
+\frac{\delta T_{i,m}}{\delta t} = \frac{1}{c_{h}\cdot\rho}\frac{\delta}{\delta z}\left(\kappa\frac{\delta T_{i,m}}{\delta z}\right)
+\end{equation}
+$$
+
 ## Adapting snow reservoir
 
 ## Catchment discharge
