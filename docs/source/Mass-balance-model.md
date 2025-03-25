@@ -58,9 +58,7 @@ Within loop 14, meltmodel '1'
 Firn ice temperatures in GloGEM are computed for each elevation band and vertical layer using heat conduction.
 
 $$
-\begin{equation}
 \frac{\delta T_{i,m}}{\delta t} = \frac{1}{c_{h}\cdot\rho}\frac{\delta}{\delta z}\left(\kappa\frac{\delta T_{i,m}}{\delta z}\right)
-\end{equation}
 $$
 
 ## Adapting snow reservoir

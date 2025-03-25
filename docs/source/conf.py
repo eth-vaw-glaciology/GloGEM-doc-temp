@@ -17,9 +17,13 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.imgmath',
     'sphinx.ext.mathjax',
     'myst_parser',
+]
+
+myst_enable_extensions = [
+    "amsmath",  # Enables LaTeX math support
+    "dollarmath",  # Enables $...$ and $$...$$ syntax
 ]
 
 intersphinx_mapping = {
