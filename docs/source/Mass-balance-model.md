@@ -56,7 +56,11 @@ Within loop 14, meltmodel '1'
 ## Firnicetemperature
 
 ### Description
-Firn ice temperatures in GloGEM are computed for each elevation band and vertical layer using heat conduction.
+The below figure provides a schematic overview of GloGEM’s englacial temperature model, which calculates vertical temperature profiles per elevation band. 
+
+![Schematic representation of the firn and ice temperature module implemented in GloGEM. The figure illustrates a flowline representation of an elevation band on the left, zooming in to provide a more detailed view of the computational grid and the heat fluxes considered in the model. The upper boundary temperatures are prescribed based on mean monthly surface air temperatures, while a geothermal heat flux is applied at the base.](images/GloGEM_firnicetemp_schematic.png)
+
+Englacial temperature evolution is simulated through heat conduction, described by the following equation:
 
 $$
 \begin{equation}
@@ -84,7 +88,7 @@ $$
 \end{equation}
 $$
 
-Positive velocity gradients serve as a proxy for extension and, consequently, crevassing, which is then used to compute a permeability factor governing the amount of liquid water entering the ice. The step-by-step computations for Great Aletschgletscher are shown in this example figure, illustrating the progression from ice velocities to velocity gradients and ultimately to the derived permeability factor. Note that the original factor, which ranges between 0 and 1, is halved, limiting the maximum permeability to 50%, as fully permeable ice is not expected.
+Positive velocity gradients serve as a proxy for extension and, consequently, crevassing, which is then used to compute a permeability factor governing the amount of liquid water entering the ice. The step-by-step computations for Great Aletschgletscher are shown in this example figure, illustrating the progression from ice velocities to velocity gradients and ultimately to the derived permeability factor $P_{i}$. Note that the original factor, which ranges between 0 and 1, is halved, limiting the maximum permeability to 50%, as fully permeable ice is not expected.
 
 ![Glacier profiles displaying the computed outputs of the ice permeability model per elevation band for Great Aletschgletscher. From left to right: ice velocities, velocity gradients, and the resulting permeability Pice in percent.](images/perm_model_outputs.png)
 
