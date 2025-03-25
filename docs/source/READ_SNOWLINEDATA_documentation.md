@@ -5,7 +5,9 @@
 
 Description
 
-This procedure reads observed snowline data from a region-specific file and extracts the metadata and numerical values necessary for calibration of glacier-specific snowline models. It identifies the appropriate snowline data file based on the provided region and calibration period, then reads and parses the content into structured arrays.
+This procedure reads observed snowline data from a region-specific file and extracts the metadata and numerical values necessary for calibration of glacier-specific snowline models. It identifies the appropriate snowline data file based on the provided region and calibration period, then reads and parses the content into structured arrays. 
+
+The procedure is stored in the /read folder.
 
 The procedure performs the following key tasks:
 
