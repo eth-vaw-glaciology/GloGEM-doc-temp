@@ -94,7 +94,51 @@ Positive velocity gradients serve as a proxy for extension and, consequently, cr
 
 ### Inputs
 
+| Name                          | Type       | Content  |  
+|-------------------------------|-----------|------------------------------------------------------|  
+| `gl`                          | String     | Flag to enable/disable debris influence on melt (`"y"` or `"n"`). Setting |  
+| `fit_layers`                  | Numeric Array | Surface classification array (0 = ice, other values for snow/firn).  |  
+| `fit_dens`                    | Numeric Array | Temperature array at each grid cell.  |  
+| `fit_dz`                      | Numeric    | Temperature threshold for melting.  |  
+| `mel`                         | Numeric Array | Ice melt array at each grid point (to be modified).  |  
+| `ye`                          | Integer    | Year index for `imelt` storage.  |  
+| `fact_permeability`           | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
+| `firn_permeability`           | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
+| `ice_permeability`            | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
+| `geothermal_flux`             | Numeric Array | Geothermal heat flux applied at the base of the glacier.  |  
+| `cair`                        | Numeric Array | Heat capacity of air.  |  
+| `cice`                        | Numeric Array | Heat capacity of ice.  |  
+| `kair`                        | Numeric Array | Thermal conductivity of air.  |  
+| `kice`                        | Numeric Array | Thermal conductivity of ice.  |  
+| `firn`                        | Numeric Array | Firn density or related parameter.  |  
+| `firnice_maxdepth`            | Numeric    | Maximum depth for firn/ice temperature calculations.  |  
+| `elev_firnicetemp`            | Numeric Array | Elevation bands for firn/ice temperature calculations.  |  
+| `firnice_profile`             | Numeric Array | Temperature profile for firn/ice.  |  
+| `firnice_profile_ind`         | Numeric Array | Index for firn/ice temperature profile.  |  
+| `tran`                        | Numeric Array | Transition-related parameter for firn/ice.  |  
+| `m`                           | Numeric Array | Melt-related parameter.  |  
+| `thick`                       | Numeric Array | Ice or firn thickness.  |  
+| `slope`                       | Numeric Array | Surface slope of the glacier.  |  
+| `plg`                         | Numeric Array | Glacier area or related parameter.  |  
+| `sno`                         | Numeric Array | Snow-related parameter.  |  
+| `rf_dsc`                      | Numeric Array | Reduction factors corresponding to debris classification.  |  
+| `rf_dt`                       | Numeric Array | Reference debris thickness values for classification.  |  
+| `Lh_rf`                       | Numeric Array | Latent heat reduction factor for debris.  |  
+| `tgs`                         | Numeric Array | Temperature gradient or related parameter.  |  
+| `tl_fit`                      | Numeric Array | Lower temperature limit for fitting.  |  
+| `te_fit`                      | Numeric Array | Upper temperature limit for fitting.  |  
+| `fit_water`                   | Numeric Array | Water content in firn/ice layers.  |  
+| `firnice_batch`               | Numeric Array | Batch processing parameter for firn/ice.  |  
+| `firnice_write`               | String     | Flag to enable writing firn/ice data to output.  |  
+
 ### Outputs
+- **Englacial temperatures at defined depths (2m, 10m, 50m, bedrock)**  
+  - `elev_firnicetemp(0)` : englacial temperature record for all elevation bands of a specific glacier at 2m depth
+  - `elev_firnicetemp(1)` : englacial temperature record for all elevation bands of a specific glacier at 10m depth
+  - `elev_firnicetemp(2)` : englacial temperature record for all elevation bands of a specific glacier at 50m depth
+  - `elev_firnicetemp(3)` : englacial temperature record for all elevation bands of a specific glacier at the bedrock
+- **Englacial temperature profiles**  
+  - `firnice_profile_ind(0,j)`: englacial temperature profile per elevation band for all dephts within the vertical computational grid.
 
 ## Adapting snow reservoir
 
