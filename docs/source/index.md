@@ -36,6 +36,13 @@ Calving-model.md
 Glacier-retreat-model-(VAS).md
 Plotting.md
 ```
+```{toctree}
+:maxdepth: 2
+:titlesonly:
+:caption: Calibration options
+
+READ_SNOWLINEDATA_documentation.md
+```
 
 ```{toctree}
 :maxdepth: 2
