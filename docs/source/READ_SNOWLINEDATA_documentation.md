@@ -1,9 +1,9 @@
 # Snowline calibration
 
 
-# Snowline: `READ_SNOWLINEDATA.pro`
+## Snowline: `READ_SNOWLINEDATA.pro`
 
-## Description
+Description
 
 This procedure reads observed snowline data from a region-specific file and extracts the metadata and numerical values necessary for calibration of glacier-specific snowline models. It identifies the appropriate snowline data file based on the provided region and calibration period, then reads and parses the content into structured arrays.
 
@@ -19,7 +19,7 @@ These outputs are used in subsequent glacier modeling routines to calibrate and 
 
 ---
 
-## Inputs
+Inputs
 
 | Name                          | Type           | Content                                                                 |
 |-------------------------------|----------------|-------------------------------------------------------------------------|
@@ -30,7 +30,7 @@ These outputs are used in subsequent glacier modeling routines to calibrate and 
 
 ---
 
-## Outputs
+Outputs
 
 | Name                    | Type           | Content                                                                 |
 |-------------------------|----------------|-------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ These outputs are used in subsequent glacier modeling routines to calibrate and 
 
 ---
 
-## Process Overview
+Process Overview
 
 1. **File Identification**
    - The procedure matches `region_loop_data` against `dir_region` to determine the correct region code.
