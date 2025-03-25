@@ -94,42 +94,41 @@ Positive velocity gradients serve as a proxy for extension and, consequently, cr
 
 ### Inputs
 
-| Name                          | Type       | Content  |  
-|-------------------------------|-----------|------------------------------------------------------|  
-| `gl`                          | String     | Flag to enable/disable debris influence on melt (`"y"` or `"n"`). Setting |  
-| `fit_layers`                  | Numeric Array | Surface classification array (0 = ice, other values for snow/firn).  |  
-| `fit_dens`                    | Numeric Array | Temperature array at each grid cell.  |  
-| `fit_dz`                      | Numeric    | Temperature threshold for melting.  |  
-| `mel`                         | Numeric Array | Ice melt array at each grid point (to be modified).  |  
-| `ye`                          | Integer    | Year index for `imelt` storage.  |  
-| `fact_permeability`           | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
-| `firn_permeability`           | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
-| `ice_permeability`            | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
-| `geothermal_flux`             | Numeric Array | Geothermal heat flux applied at the base of the glacier.  |  
-| `cair`                        | Numeric Array | Heat capacity of air.  |  
-| `cice`                        | Numeric Array | Heat capacity of ice.  |  
-| `kair`                        | Numeric Array | Thermal conductivity of air.  |  
-| `kice`                        | Numeric Array | Thermal conductivity of ice.  |  
-| `firn`                        | Numeric Array | Firn density or related parameter.  |  
-| `firnice_maxdepth`            | Numeric    | Maximum depth for firn/ice temperature calculations.  |  
-| `elev_firnicetemp`            | Numeric Array | Elevation bands for firn/ice temperature calculations.  |  
-| `firnice_profile`             | Numeric Array | Temperature profile for firn/ice.  |  
-| `firnice_profile_ind`         | Numeric Array | Index for firn/ice temperature profile.  |  
-| `tran`                        | Numeric Array | Transition-related parameter for firn/ice.  |  
-| `m`                           | Numeric Array | Melt-related parameter.  |  
-| `thick`                       | Numeric Array | Ice or firn thickness.  |  
-| `slope`                       | Numeric Array | Surface slope of the glacier.  |  
-| `plg`                         | Numeric Array | Glacier area or related parameter.  |  
-| `sno`                         | Numeric Array | Snow-related parameter.  |  
-| `rf_dsc`                      | Numeric Array | Reduction factors corresponding to debris classification.  |  
-| `rf_dt`                       | Numeric Array | Reference debris thickness values for classification.  |  
-| `Lh_rf`                       | Numeric Array | Latent heat reduction factor for debris.  |  
-| `tgs`                         | Numeric Array | Temperature gradient or related parameter.  |  
-| `tl_fit`                      | Numeric Array | Lower temperature limit for fitting.  |  
-| `te_fit`                      | Numeric Array | Upper temperature limit for fitting.  |  
-| `fit_water`                   | Numeric Array | Water content in firn/ice layers.  |  
-| `firnice_batch`               | Numeric Array | Batch processing parameter for firn/ice.  |  
-| `firnice_write`               | String     | Flag to enable writing firn/ice data to output.  |  
+| Name                          | Type            | Content  |  
+|-------------------------------|-----------------|------------------------------------------------------|  
+| `firn`                        | Numeric Array   | Represents the firn cover in each elevation band.  |  
+| `sno`                         | Numeric Array   | Represents the snow cover or snow storage in each elevation band.  |  
+| `tgs`                         | Numeric Array   | Contains surface air temperature.  |  
+| `plg`                         | Numeric Array   | Precipitation array at each grid point.  |  
+| `mel`                         | Numeric Array   | Ice melt array at each grid point (to be modified).  |  
+| `fit_water`                   | Numeric Array   | Liquid water available from surface melt `mel` and precipitation `plg` at each grid point.  |  
+| `firnice_maxdepth`            | Numeric         | Maximum depth for firn/ice profile.  |  
+| `elev_firnicetemp`            | Numeric Array   | Stores englacial temperatures for predefined depths (2m, 10m, 50m, bedrock depth).  |  
+| `firnice_profile_ind`         | Numeric Array   | Index array that specifies which elevation bands or grid points correspond to specific firn/ice profiles.  |  
+| `firnice_profile`             | Numeric Array   | Array that specifies depths where firn/ice temperature profiles are being tracked.  |  
+| `tran`                        | Numeric Array   | Time period of modeling.  |  
+| `m`                           | Variable        | Current month.  |  
+| `te_fit`                      | Numeric Array   | Temporal array holding computed englacial temperatures.  |  
+| `tl_fit`                      | Numeric Array   | Computed englacial temperatures.  |  
+| `firnice_batch`               | Boolean         | Enables firnice batch mode (run for all glaciers in batch file).  |  
+| `firnice_write`               | String Array    | Contains flags to enable writing firn/ice data to output.  |  
+| `Lh_rf`                       | Physical Constant | Latent heat of fusion per unit volume [J m-3].  |  
+| `rf_dt`                       | Variable        | Time step [in seconds].  |  
+| `rf_dsc`                      | Variable        | Scaling factor that increases the temporal resolution of the refreezing model.  |  
+| `slope`                       | Numeric Array   | Surface slope of the glacier per elevation band.  |  
+| `thick`                       | Numeric Array   | Ice thickness per elevation band.  |  
+| `ye`                          | Integer         | Year index for `imelt` storage.  |  
+| `kice`                        | Physical Constant | Thermal conductivity of ice.  |  
+| `kair`                        | Physical Constant | Thermal conductivity of air.  |  
+| `cice`                        | Physical Constant | Heat capacity of ice.  |  
+| `cair`                        | Physical Constant | Heat capacity of air.  |  
+| `gl`                          | Numeric Array   | Array of size `nb` (number of elevation bands) tracking nodata values.  |  
+| `geothermal_flux`             | Numeric Array   | Geothermal heat flux applied at the base of the glacier (one value per glacier).  |  
+| `ice_permeability`            | Boolean         | Enables/disables percolation of water into the ice & reduction of water input based on the velocity gradient model.  |  
+| `firn_permeability`           | Boolean         | Enables/disables percolation of water into the firn (sets `fit_water` to 0 if `y`).  |  
+| `fit_layers`                  | Numeric Array   | Number of vertical layers with given thickness set to [10, 10, 10].  |  
+| `fit_dz`                      | Numeric Array   | 2D array that stores the thickness of each layer.  |  
+| `fit_dens`                    | Numeric Array   | Reference density profile, shifted depending on snow/firn situation.  |  
 
 ### Outputs
 - **Englacial temperatures at defined depths (2m, 10m, 50m, bedrock)**  
