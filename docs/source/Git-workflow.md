@@ -106,6 +106,8 @@ $ git pull origin main
 $ git add <file_name>
 ```
 
+**Note:** The conflict resolution tool in Visual Studio Code is very helpful for resolving conflicts while maintaining a clear overview.
+
 ### Verify the merge
 ```bash
 $ git status
