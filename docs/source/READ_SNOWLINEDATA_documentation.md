@@ -43,6 +43,8 @@ Each glacier is calibrated individually, using the **reanalysis product specifie
 - If the **upper or lower boundary** of the `ddf` range is reached, `toff` is activated and adjusted accordingly.
 - The goal here is to find a parameter set that **matches the geodetic mass balance**.
 
+![Conceptual sketch..... add some description here. ](images/calibration_target_scheme.png)
+
 ### Step 2: Match with Snowline Altitudes
 
 - For all combinations that match the geodetic mass balance, the model calculates the **weighted RMSE** between the **observed** and **modelled snowline altitudes**.
