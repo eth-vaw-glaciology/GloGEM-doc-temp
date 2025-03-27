@@ -11,7 +11,8 @@ Currently, this calibration is **only applicable for High Mountain Asia**, as sn
 ## Data Sources
 
 - **Geodetic Mass Balance**: Hugonnet et al. (2021), for the period **2000–2020**  
-- **Mean Snowline Altitude & Standard Deviation**: Loibl et al. (2025), for the period **2000–2020**
+- **Mean Snowline Altitude & Standard Deviation**: [Loibl et al., 2023](https://doi.pangaea.de/10.1594/PANGAEA.953619)
+, for the period **2000–2020**
 
 ---
 
