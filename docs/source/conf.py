@@ -47,7 +47,7 @@ html_theme_options = {
     "use_repository_button": True,
     "logo": {
         "image_light": "images/GloGEM_logo_v2.png",
-        "image_dark": "images/GloGEM_logo_v2_dark.png",
+        "image_dark": "images/GloGEM_logo_v3_dark.png",
     }
 }
 
