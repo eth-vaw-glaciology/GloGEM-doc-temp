@@ -38,6 +38,7 @@ Each glacier is calibrated individually, using the **reanalysis product specifie
 
 
 ![Conceptual sketch..... add some description here. ](images/calibration_scheme_snowline.png)
+Conceptual sketch of the calibration procedure. 
 
 ### Step 1: Loop Through `cprec` and `ddf`
 
@@ -47,6 +48,7 @@ Each glacier is calibrated individually, using the **reanalysis product specifie
 - The goal here is to find a parameter set that **matches the geodetic mass balance**.
 
 ![Conceptual sketch..... add some description here. ](images/calibration_target_scheme_github_1.png)
+Conceptual sketch of the target selection in the calibration. 
 
 ### Step 2: Match with Snowline Altitudes
 
