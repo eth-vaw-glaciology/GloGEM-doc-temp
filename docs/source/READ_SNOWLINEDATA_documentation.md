@@ -36,6 +36,9 @@ Each glacier is calibrated individually, using the **reanalysis product specifie
 
 ## Calibration Procedure
 
+
+![Conceptual sketch..... add some description here. ](images/calibration_scheme_snowline.png)
+
 ### Step 1: Loop Through `cprec` and `ddf`
 
 - Define a **range and step size** for `cprec`, e.g., **[0.8 – 2.5]** with a step size of **0.2**.
