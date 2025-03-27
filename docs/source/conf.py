@@ -40,11 +40,15 @@ templates_path = ['_templates'] # Add templates path in order to use custom temp
 
 html_theme = 'sphinx_book_theme' # Set the HTML theme to use
 
-html_logo = 'images/GloGEM_logo_v2.png' # Path to the logo image
+#html_logo = 'images/GloGEM_logo_v2.png' # Path to the logo image
 
 html_theme_options = {
     "repository_url": "https://github.com/sdrocer/GloGEM-documentation",
     "use_repository_button": True,
+    "logo": {
+        "image_light": "images/GloGEM_logo_v2.png",
+        "image_dark": "images/GloGEM_logo_v2_dark.png",
+    }
 }
 
 # Set the Pygments style
