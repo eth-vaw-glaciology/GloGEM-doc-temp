@@ -38,6 +38,7 @@ Each glacier is calibrated individually, using the **reanalysis product specifie
 
 
 ![Conceptual sketch..... add some description here. ](images/calibration_scheme_snowline.png)
+
 Conceptual sketch of the calibration procedure. 
 
 ### Step 1: Loop Through `cprec` and `ddf`
