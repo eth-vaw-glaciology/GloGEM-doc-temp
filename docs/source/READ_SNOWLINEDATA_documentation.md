@@ -1,4 +1,65 @@
-# Snowline calibration
+# Calibration on Geodetic Mass Balance and Snowlines (Snowline Calibration)
+
+In this calibration, the targets are:
+- The **geodetic glacier mass balance** over a defined time period, and  
+- The **"daily" median snowline altitude**.
+
+Currently, this calibration is **only applicable for High Mountain Asia**, as snowline data is available for this region. However, it can be extended to other regions when suitable datasets become available.
+
+---
+
+## Data Sources
+
+- **Geodetic Mass Balance**: Hugonnet et al. (2021), for the period **2000–2020**  
+- **Mean Snowline Altitude & Standard Deviation**: Loibl et al. (2025), for the period **2000–2020**
+
+---
+
+## Calibration Overview
+
+Unlike the original calibration, this method does **not loop through calibration phases sequentially**, but instead **loops through them simultaneously**:
+
+### Calibration Parameters:
+
+1. **`cprec`** — Precipitation correction factor  
+2. **`ddf`** — Melt factor (for snow)  
+3. **`toff`** — Temperature offset (bias)
+
+Each glacier is calibrated individually, using the **reanalysis product specified** in the `input.pro` file. Parameter boundaries can be defined either in `input.pro` or in the reanalysis-specific `regional_parameter` file.
+
+---
+
+## Calibration Procedure
+
+### Step 1: Loop Through `cprec` and `ddf`
+
+- Define a **range and step size** for `cprec`, e.g., **[0.8 – 2.5]** with a step size of **0.2**.
+- For each value of `cprec`, the model searches for a matching `ddf` within its specified range.
+- If the **upper or lower boundary** of the `ddf` range is reached, `toff` is activated and adjusted accordingly.
+- The goal here is to find a parameter set that **matches the geodetic mass balance**.
+
+### Step 2: Match with Snowline Altitudes
+
+- For all combinations that match the geodetic mass balance, the model calculates the **weighted RMSE** between the **observed** and **modelled snowline altitudes**.
+- The calibration selects the parameter combination with the **lowest weighted RMSE** as the best fit.
+
+---
+
+## Notes
+
+- The calibration process explores all combinations simultaneously, rather than in sequence.
+- Parameters `cprec` and `ddf` are bounded; only when those bounds are hit does `toff` come into play.
+- **Weighted RMSE** uses snowline standard deviation as a weight to reflect uncertainty.
+- Final selection depends on **both mass balance and snowline fit**.
+
+---
+
+## To Do
+
+- [ ] Add information on the **calibration stop criteria**
+- [ ] Include **two figures** illustrating the calibration concept and parameter search loop
+
+
 
 
 ## Snowline: `READ_SNOWLINEDATA.pro`
