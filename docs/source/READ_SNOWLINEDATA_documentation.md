@@ -175,7 +175,7 @@ This function computes the Root Mean Square Error (RMSE) between observed and pr
 
 | Name        | Type         | Content                                                               |
 |-------------|--------------|-----------------------------------------------------------------------|
-| Return      | Double       | Weighted RMSE between observed and predicted snowline values.         |
+| RMSE        | Double       | Weighted RMSE between observed and predicted snowline values.         |
 
 ---
 
