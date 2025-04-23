@@ -39,3 +39,5 @@ Each glacier is calibrated individually using the reanalysis product specified i
 In the end the calibration ends up with a paramter set, that can be one of combinations indicated in the Figure below. 
 
 ![Conceptual sketch of the calibration loop for the calibration aimed towards the geodetic mass balance. Parameter ranges in the figure are the default boundaries that can be adjusted](images/original_calibration_scheme.png)
+
+Figure: Conceptual sketch of the calibration loop for the calibration aimed towards the geodetic mass balance. Parameter ranges in the figure are the default boundaries that can be adjusted.
