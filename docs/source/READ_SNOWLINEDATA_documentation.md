@@ -55,23 +55,14 @@ Conceptual sketch of the target selection in the calibration.
 ### Step 2: Match with Snowline Altitudes
 
 - For all combinations that match the geodetic mass balance, the model calculates the **weighted RMSE** between the **observed** and **modelled snowline altitudes**.
+- With all calculated cprec and corresponding rmse a **cubic spline function (minimum function)** is plotted to fitted to find the minimum rmse and with this the best fitting parameter set.
 - The calibration selects the parameter combination with the **lowest weighted RMSE** as the best fit.
 
----
-
-## Notes
-
-- The calibration process explores all combinations simultaneously, rather than in sequence.
-- Parameters `cprec` and `ddf` are bounded; only when those bounds are hit does `toff` come into play.
-- **Weighted RMSE** uses snowline standard deviation as a weight to reflect uncertainty.
-- Final selection depends on **both mass balance and snowline fit**.
+### Calibration Stop Criteria: 
+- The calibration is stopped as soon as the rmse starts to increase again. Then the calculated parameter sets are fitted to the minimum function and the minimun rmse is selected. 
 
 ---
 
-## To Do
-
-- [ ] Add information on the **calibration stop criteria**
-- [ ] Include **two figures** illustrating the calibration concept and parameter search loop
 
 
 ## snowline data format
