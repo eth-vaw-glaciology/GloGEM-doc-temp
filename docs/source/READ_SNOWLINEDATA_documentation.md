@@ -147,4 +147,55 @@ Process Overview
    - Extracts the glacier ID from the string identifier in each row.
    - Populates output arrays with relevant snowline observation data.
 
+## Snowline: `compare_snowline_rmse.pro`
 
+### Description
+
+This function computes the Root Mean Square Error (RMSE) between observed and predicted snowline values for a specified glacier ID. It uses  weighted RMSE calculations, where weights are determined based on the standard deviation of the observations. The function returns a single RMSE value that quantifies the prediction accuracy for the selected glacier.
+
+
+---
+
+### Inputs
+
+| Name                    | Type            | Content                                                                 |
+|-------------------------|-----------------|-------------------------------------------------------------------------|
+| `calisnow_gid`          | String Array    | Full array of glacier IDs (with potential repeats).                     |
+| `id_glac`               | String          | The specific glacier ID to compute RMSE for.                            |
+| `year_obs`              | Numeric Array   | Observation years corresponding to snowline observations.               |
+| `doy_obs`               | Numeric Array   | Day-of-year values for each observation.                                |
+| `snowlineday_obs`       | Numeric Array   | Observed snowline elevation values.                                     |
+| `snowline_stdev_obs`    | Numeric Array   | Standard deviation (uncertainty) of observed snowline values.           |
+| `snowlineday`           | Numeric Array   | Predicted snowline values over a time series (e.g., daily).             |
+| `year`                  | Integer         | Reference year used to compute time index into predicted array.         |
+
+---
+
+### Outputs
+
+| Name        | Type         | Content                                                               |
+|-------------|--------------|-----------------------------------------------------------------------|
+| Return      | Double       | Weighted RMSE between observed and predicted snowline values.         |
+
+---
+
+### Process Overview
+
+1. **Identify Unique Glaciers**
+   - The function first determines the set of unique glacier IDs from `calisnow_gid`.
+
+2. **Select Glacier Observations**
+   - It filters the input arrays to only include data relevant to `id_glac`.
+
+3. **Compute Time Indices**
+   - Converts year and DOY of observations into indices corresponding to the predicted snowline array.
+
+4. **Extract Data**
+   - Pulls the observed and predicted snowline values using calculated indices.
+
+5. **Calculate RMSE**
+   - Computes squared errors between observed and predicted values.
+   - Applies weighting based on inverse variance from standard deviation.
+   - Final RMSE is computed as the square root of the weighted mean squared error.
+
+---
