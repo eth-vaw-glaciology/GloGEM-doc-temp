@@ -63,10 +63,26 @@ Conceptual sketch of the target selection in the calibration.
 
 ---
 
-
-
 ## snowline data format
 
+The snowline data used in this calibration is ideally stored in the following format:  
+a `.dat` file with **five columns**:
+
+```
+RGI_ID median_snowline Stdev Year Doy
+```
+
+## Example
+
+It can look something like this:
+
+```
+RGI_ID           median_snowline  Stdev  Year  Doy
+RGI60-14.00004   4769             7      2000  55
+RGI60-14.00004   4770             10     2000  87
+RGI60-14.00004   4770             10     2000  103
+RGI60-14.00004   4770             10     2000  127
+```
 ## Snowline: `READ_SNOWLINEDATA.pro`
 
 Description
