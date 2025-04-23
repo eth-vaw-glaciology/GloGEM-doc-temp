@@ -35,13 +35,7 @@ Each glacier is calibrated individually using the reanalysis product specified i
 
 ---
 
-## Notes
-
-- The calibration **progresses through each phase sequentially**.
-- During calibration:
-  - **Either `cprec` or `ddf` is fixed at a boundary**, while the other is varied within its allowed range.
-  - `toff` is only adjusted if the first two parameters fail to achieve a good match.
-  
----
+## Summary
+In the end the calibration ends up with a paramter set, that can be one of combinations indicated in the Figure below. 
 
 ![Conceptual sketch of the calibration loop for the calibration aimed towards the geodetic mass balance. Parameter ranges in the figure are the default boundaries that can be adjusted](images/original_calibration_scheme.png)
