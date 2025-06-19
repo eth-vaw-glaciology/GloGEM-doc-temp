@@ -155,7 +155,7 @@ bands:
 
 grids:
 
-**/itet-stor/[username]/glogem/geometricdata/rgiv7/grids/[region]/(dem/gl/thickness/lakes/)**
+**/itet-stor/[username]/glogem/geometricdata/rgiv7/grids/[region]/(dem/gl/)**
 
 bands:
 
