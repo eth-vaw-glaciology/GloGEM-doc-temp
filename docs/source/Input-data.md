@@ -145,13 +145,11 @@ In general, the climate data is stored in:
 
 
 grids: 
-**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/dem/**
 
-**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/gl/**
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/(dem/gl/thickness/lakes/)**
 
-**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/thickness/**
-
-**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/lakes/**
+bands:
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/bands/[region]/(bands_consensus2019/bands_HF2012/)**
 
 ### RGIv7.0
 
