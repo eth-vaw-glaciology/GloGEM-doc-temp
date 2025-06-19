@@ -153,9 +153,10 @@ bands:
 
 ### RGIv7.0
 
-**_'/scratch_net/iceberg_second/mhuss/RGIv7.0/dem'_**
+**/itet-stor/[username]/glogem/geometricdata/rgiv7/grids/[region]/(dem/gl/thickness/lakes/)**
 
-**_'/scratch_net/iceberg_second/mhuss/RGIv7.0/glmask'_**
+bands:
+**/itet-stor/[username]/glogem/geometricdata/rgiv7/bands/[region]/(bands_consensus2019/bands_HF2012/)**
 
 **_'/scratch_net/iceberg_second/mhuss/RGIv7.0/bands (files/results/grids)'_**
 
