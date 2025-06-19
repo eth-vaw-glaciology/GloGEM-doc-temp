@@ -1,6 +1,6 @@
 # Calibration on Geodetic Mass Balance (Original Calibration)
 
-In this calibration, the target is the **geodetic glacier mass balance** over a certain time period. For GloGEM, the default data set is **Hugonnet et al. (2021)** for the period **2000–2020**.
+In this calibration, the target is the **geodetic glacier mass balance** over a certain time period. For GloGEM, the default data set is **Hugonnet et al. (2021)** for the period **2000–2020** and RGIv6.
 
 The calibration process involves looping through **three calibration phases** in sequence:
 
