@@ -159,7 +159,7 @@ grids:
 
 bands:
 
-**/itet-stor/[username]/glogem/geometricdata/rgiv7/bands/results/(files/bands/grids)/[region]/**
+**/itet-stor/[username]/glogem/geometricdata/rgiv7/bands/(files/bands/grids)/[region]/**
 
 **_'/scratch_net/iceberg_second/mhuss/RGIv7.0/bands (files/results/grids)'_**
 
