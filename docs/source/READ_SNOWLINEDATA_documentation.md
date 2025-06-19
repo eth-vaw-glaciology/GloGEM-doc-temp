@@ -26,7 +26,7 @@ Unlike the original calibration, this method does **not loop through calibration
 2. **`ddfsnow`** — Melt factor for snow  
 3. **`toff`** — Temperature offset (bias)
 
-Each glacier is calibrated individually, using the **reanalysis product specified** in the `input.pro` file. `ddf` boundaries can be defined either in `input.pro` or in the reanalysis-specific `regional_parameter` file. `cprec` boundaries and step size are defined in the code itself (after entering the `loop over calibration phase`). To run the model one currently needs these four codes:
+Each glacier is calibrated individually, using the **reanalysis product specified** in the `input.pro` file. `ddfsnow` boundaries can be defined either in `input.pro` or in the reanalysis-specific `regional_parameter` file. `cprec` boundaries and step size are defined in the code itself (after entering the `loop over calibration phase`). To run the model one currently needs these four codes:
 - `input_snow.pro`: settings
 - `glogem.pro`: main calibration code
 - `read_snowlinedata.pro`: procedure to read in the snowline data
