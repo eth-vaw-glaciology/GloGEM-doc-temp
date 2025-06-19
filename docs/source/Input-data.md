@@ -166,10 +166,12 @@ grids:
 Each glacier requires an elevation-band file (~ flowline) which provides the initial ice thickness and area of each elevation band. The standard procedure in GloGEM to date is to use the "consensus estimate" of Farinotti et al. (2019) as starting point. This data is stored in:
 
 **_'/scratch_net/iceberg_second/mhuss/global_thickness/rgi60/bands_consensus2019/'_**
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/bands/bands_consensus2019/'_**
 
 However, for some glaciers, the consensus data provides unrealistic results. Therefore, for these specific glaciers, GloGEM will not use the consensus estimate of the ice thickness, but the Huss and Farinotti (2012) ice thickness estimate. The data is stored in:
 
 _**'/scratch_net/iceberg_second/mhuss/global_thickness/rgi60/bands_HF2012/'**_
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/bands/bands_HF2012/'_**
 
 ## Debris cover
 
@@ -180,5 +182,5 @@ _**'/scratch_net/iceberg_second/mhuss/global_thickness/rgi60/bands_HF2012/'**_
 The hypsometry file is stored in the same file as the ice thickness of the consensus estimate. 
 
 **_'/scratch_net/iceberg_second/mhuss/global_thickness/rgi60/bands_consensus2019/'_**
-
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/bands/bands_consensus2019/'_**
 
