@@ -65,6 +65,10 @@ To reduce the computational effort of this calibration the calibration stops whe
 - rmse(snowline) is increasing
 ---
 
+### Calibration impact results 
+- refer to paper when there is one
+
+
 ## snowline data format
 
 The snowline data used in this calibration is ideally stored in the following format:  
