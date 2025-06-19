@@ -138,7 +138,7 @@ This folder contains CMIP6 **monthly data** of 5 GCMs that were used for the GMI
 
 ## Geometric data
 
-In general, the climate data is stored in:
+In general, the geometric data is stored in:
 **/itet-stor/[username]/glogem/geometricdata/**
 
 ### RGIv6.0
