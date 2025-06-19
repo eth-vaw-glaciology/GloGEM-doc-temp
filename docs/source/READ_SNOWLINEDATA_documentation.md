@@ -4,7 +4,7 @@ In this calibration, the targets are:
 - The **geodetic glacier mass balance** over a defined time period, and  
 - The **"daily" median snowline altitude**.
 
-Currently, this calibration is **only applicable for High Mountain Asia**, as snowline data is available for this region. However, it can be extended to other regions when suitable datasets become available.
+Currently, this calibration is **only applicable for High Mountain Asia and RGIv6**, as snowline data is available for this region. However, it can be extended to other regions when suitable datasets become available.
 
 ---
 
