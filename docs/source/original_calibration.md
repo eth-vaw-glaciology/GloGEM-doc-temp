@@ -5,7 +5,7 @@ In this calibration, the target is the **geodetic glacier mass balance** over a 
 The calibration process involves looping through **three calibration phases** in sequence:
 
 1. **Calibration Phase 1: `cprec`** — Precipitation correction factor  
-2. **Calibration Phase 2: `ddf`** — Melt factor (for snow)  
+2. **Calibration Phase 2: `ddfsnow`** — Melt factor for snow (ddfice is defined as 2x ddfsnow)  
 3. **Calibration Phase 3: `toff`** — Temperature offset (bias)
 
 Each glacier is calibrated individually using the reanalysis product specified in the `input.pro` file. Parameter boundaries can be defined either in `input.pro` or by referring to the **reanalysis-specific** `regional_parameter` file.
