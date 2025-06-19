@@ -138,11 +138,20 @@ This folder contains CMIP6 **monthly data** of 5 GCMs that were used for the GMI
 
 ## Geometric data
 
- Grids are located -> 
+In general, the climate data is stored in:
+**/itet-stor/[username]/glogem/geometricdata/**
 
 ### RGIv6.0
 
-**'_vierzack03_second/mhuss/DEMs_global_'**
+
+grids: 
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/dem/**
+
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/gl/**
+
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/thickness/**
+
+**/itet-stor/[username]/glogem/geometricdata/rgiv6/grids/[region]/lakes/**
 
 ### RGIv7.0
 
