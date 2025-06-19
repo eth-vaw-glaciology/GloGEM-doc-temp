@@ -10,6 +10,10 @@ The calibration process involves looping through **three calibration phases** in
 
 Each glacier is calibrated individually using the reanalysis product specified in the `input.pro` file. Parameter boundaries can be defined either in `input.pro` or by referring to the **reanalysis-specific** `regional_parameter` file.
 
+
+## Data Sources
+
+- **Geodetic Mass Balance**: [Hugonnet et al., 2021](https://www.nature.com/articles/s41586-021-03436-z), for the period **2000–2020**  
 ---
 
 ## Calibration Phases
