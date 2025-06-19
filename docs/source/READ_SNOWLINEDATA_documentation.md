@@ -59,8 +59,10 @@ Conceptual sketch of the target selection in the calibration.
 - The calibration selects the parameter combination with the **lowest weighted RMSE** as the best fit.
 
 ### Calibration Stop Criteria: 
-- The calibration is stopped as soon as the rmse starts to increase again. Then the calculated parameter sets are fitted to the minimum function and the minimun rmse is selected. 
-
+To reduce the computational effort of this calibration the calibration stops when:
+- `cprec` > 3, and
+- `t_offset` not 0, and
+- rmse(snowline) is increasing
 ---
 
 ## snowline data format
