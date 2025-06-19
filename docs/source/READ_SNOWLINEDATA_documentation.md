@@ -23,7 +23,7 @@ Unlike the original calibration, this method does **not loop through calibration
 ### Calibration Parameters:
 
 1. **`cprec`** — Precipitation correction factor  
-2. **`ddf`** — Melt factor (for snow)  
+2. **`ddfsnow`** — Melt factor for snow  
 3. **`toff`** — Temperature offset (bias)
 
 Each glacier is calibrated individually, using the **reanalysis product specified** in the `input.pro` file. `ddf` boundaries can be defined either in `input.pro` or in the reanalysis-specific `regional_parameter` file. `cprec` boundaries and step size are defined in the code itself (after entering the `loop over calibration phase`). To run the model one currently needs these four codes:
