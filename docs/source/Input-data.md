@@ -19,6 +19,8 @@ This folder contains all the data for the historical period. There are two optio
 
 ### ERA5Land (DAILY) (1950-2024)
 
+### LVT is currently processing all the 2025 data. So far Central Asia is available up to 2025
+
 **ERA5-Land** is a global **high-resolution** land surface dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF) as part of the Copernicus Climate Change Service (C3S). It provides hourly data on land surface variables at a **9 km spatial resolution**, making it a valuable resource for studying climate and environmental changes. For GloGEM, we have prepared the data in daily format. 
 
 Files to be directly used by GloGEM:
