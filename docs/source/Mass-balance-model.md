@@ -7,7 +7,7 @@ This part of the documentation is still under development.
 
 ## Melt
 
-## Debris: CALCULATEDEBRISMELT.pro
+## Debris: CALCULATEDEBRISMELT.pro - need to review this (Alex)
 
 ### Description 
 This procedure models the effect of supraglacial debris on glacier melt. If the setting `debris_supraglacial` is set to `"y"`, the procedure calculates the melt reduction due to debris cover by reading the debris thickness and debris fraction. It identifies debris-covered ice where the surface type is `"ice"`, the temperature exceeds the melting threshold, and debris exists.  
@@ -24,15 +24,15 @@ The melt calculations are summed and stored in `imelt(ye)`, normalized by the gl
 |-------------------------------|-----------|------------------------------------------------------|  
 | `debris_supraglacial`         | String    | Flag to enable/disable debris influence on melt (`"y"` or `"n"`).  Setting |  
 | `sur`                         | Numeric Array | Surface classification array (0 = ice, other values for snow/firn).  |  
-| `tg`                          | Numeric Array | Temperature array at each grid cell.  |  
+| `tg`                          | Numeric Array | Temperature array at each elevation band.  |  
 | `t_melt`                      | Numeric    | Temperature threshold for melting.  |  
-| `debris_thick`                | Numeric Array | Debris thickness at each grid point.  |  
+| `debris_thick`                | Numeric Array | Debris thickness at each elevation band.  |  
 | `debris_frac`                 | Numeric Array | Fraction of surface covered by debris.  |  
 | `debris_type_th`              | Numeric Array | Reference debris thickness values for classification.  |  
 | `debris_type_red`             | Numeric Array | Reduction factors corresponding to `debris_type_th`.  |  
 | `debris_ponddens`             | Numeric Array | Fraction of surface covered by melt ponds or cliffs.  |  
 | `debris_pond_enhancementfactor` | Numeric | Enhancement factor for pond/cliff melt.  |  
-| `mel`                         | Numeric Array | Ice melt array at each grid point (to be modified).  |  
+| `mel`                         | Numeric Array | Ice melt array at each elevation band (to be modified).  |  
 | `imelt`                       | Numeric Array | Integrated melt accumulation per year.  |  
 | `ye`                          | Integer    | Year index for `imelt` storage.  |  
 | `ar_gl`                       | Numeric    | Total glacier area (for normalization).  |  
