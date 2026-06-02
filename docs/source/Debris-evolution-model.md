@@ -1,4 +1,4 @@
-# Debris evolution model: DEBRIS_MODEL.pro 
+# Need to review this (Alex) Debris evolution model: DEBRIS_MODEL.pro 
 
 ## Description
 The `DEBRIS_MODEL` procedure simulates debris-covered glacier evolution over time by considering factors such as equilibrium line altitude (ELA), debris expansion, debris thickening, and pond formation. It models debris expansion across glacier surfaces based on elevation bands and historical mass balance trends. The model also accounts for the dynamic response of debris thickness and pond density over time.
