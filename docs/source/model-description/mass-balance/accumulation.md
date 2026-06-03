@@ -68,7 +68,6 @@ GloGEM provides specific rain in (mm/d, or mm/myr) for the initially glacierized
 
 | Variable | Description |
 |----------|-------------|
-
 | `Rain_day` | Daily specific rain on initially glacierized area (mm/d)  |
 | `Rain_sfc` | Annual specific rain on initially glacierized area (mm/yr) |
 | `Accumulation_day` | Daily glacier-specific accumulation (m.w.e.) |
