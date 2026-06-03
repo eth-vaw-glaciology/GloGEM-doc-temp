@@ -26,7 +26,10 @@ where `dPdz` is the precipitation gradient in % per 100 m. Default value is 1.5 
 
 ### 3. High-elevation constraint
 
-Precipitation is capped at very high elevations to prevent unrealistic accumulation. Above a critical elevation (defined as a fraction `no_incprec[0]` of the glacier's elevation range, with a minimum range of `no_incprec[1]` m), precipitation is reduced following a power-law function with exponents `no_incprec[2]` and `no_incprec[3]`.
+Precipitation is reduced at high elevations to prevent unrealistic accumulation. This reduction is only applied if the glacier's total elevation range exceeds `no_incprec[1]` (default 1000 m). 
+
+For elevation bands above a critical height $z_{\text{crit}}$—defined as the fraction `no_incprec[1]` of the glacier's elevation range—precipitation is reduced using a function of the form $a \cdot x^b$. Here, $x$ represents the normalized height above $z_{\text{crit}}$, while $a$ and $b$ correspond to the parameters `no_incprec[3]` and `no_incprec[4]`.
+
 
 ### 4. Snow–rain partitioning
 
@@ -60,7 +63,7 @@ $$
 | `dPdz` | 1.5 | Precipitation gradient [% per 100 m] |
 | `T_thres` | 1.5 | Snow–rain temperature threshold [°C] |
 | `snow_multiplier` | 1.2 | Additional scaling factor applied to snowfall |
-| `no_incprec` | [0.75, 1000, 2, 2] | High-elevation precipitation reduction: [elevation fraction, minimum range (m), exponent a, exponent b] |
+| `no_incprec` | [0.75, 1000, 2, 2] | High-elevation precipitation reduction: [elevation fraction, minimum elevation range (m), parameter a, parameter b] |
 
 ## Outputs
 
