@@ -1,0 +1,72 @@
+# Accumulation
+
+Accumulation is computed each time step (month or day) for every elevation band. The procedure is implemented in `procedures/processing/accumulation.pro`.
+
+## Method
+
+### 1. Precipitation scaling
+
+Raw precipitation from the climate input is scaled by a correction factor `c_prec` and converted to metres water equivalent:
+
+$$
+P_c = P_{\text{clim}} \cdot c_{\text{prec}} / 1000
+$$
+
+`c_prec` accounts for systematic undercatch and regional biases. It is a primary calibration parameter; see [Calibration](../../calibration/index.md).
+
+### 2. Elevation extrapolation
+
+Precipitation is extrapolated from the climate grid-point elevation $h_{\text{clim}}$ to each elevation band $z$ using a linear gradient:
+
+$$
+P(z) = P_c \left(1 + \frac{z - h_{\text{clim}}}{10000} \cdot \text{dPdz} \right)
+$$
+
+where `dPdz` is the precipitation gradient in % per 100 m. Default value is 1.5 % per 100 m; regional values are read from the regional parameter file.
+
+### 3. High-elevation constraint
+
+Precipitation is capped at very high elevations to prevent unrealistic accumulation. Above a critical elevation (defined as a fraction `no_incprec[0]` of the glacier's elevation range, with a minimum range of `no_incprec[1]` m), precipitation is reduced following a power-law function with exponents `no_incprec[2]` and `no_incprec[3]`.
+
+### 4. Snow–rain partitioning
+
+Precipitation is partitioned into snowfall $P_s$ and rainfall $P_l$ based on air temperature, with a linear transition zone of ±1 °C around the threshold `T_thres`:
+
+$$
+P_s = \begin{cases}
+P(z) & \text{if } T < T_{\text{thres}} - 1 \\
+P(z) \cdot \dfrac{-(T - T_{\text{thres}} - 1)}{2} & \text{if } T_{\text{thres}} - 1 \leq T \leq T_{\text{thres}} + 1 \\
+0 & \text{if } T > T_{\text{thres}} + 1
+\end{cases}
+$$
+
+$$
+P_l = P(z) - P_s
+$$
+
+### 5. Snow multiplier
+
+Snowfall is increased by a constant factor to account for additional wind-blown snow deposition and measurement undercatch specific to snowfall:
+
+$$
+P_s^{\text{final}} = P_s \cdot \text{snow\_multiplier}
+$$
+
+## Parameters
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `c_prec` | 1.5 | Precipitation correction factor (calibrated) |
+| `dPdz` | 1.5 | Precipitation gradient [% per 100 m] |
+| `T_thres` | 1.5 | Snow–rain temperature threshold [°C] |
+| `snow_multiplier` | 1.2 | Additional scaling factor applied to snowfall |
+| `no_incprec` | [0.75, 1000, 2, 2] | High-elevation precipitation reduction: [elevation fraction, minimum range (m), exponent a, exponent b] |
+
+## Outputs
+
+| Variable | Description |
+|----------|-------------|
+| `psg` | Snowfall per elevation band [m w.e.] |
+| `plg` | Rainfall per elevation band [m w.e.] |
+| `accum[ye]` | Area-averaged annual accumulation [m w.e.] |
+| `rain[ye]` | Area-averaged annual rainfall [m w.e.] |
