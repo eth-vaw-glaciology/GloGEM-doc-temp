@@ -83,5 +83,5 @@ The calculation distinguishes between firn surfaces (where the full column is av
 
 | Variable | Description |
 |----------|-------------|
-| `Refreezing_sfc` | Area-averaged annual refreezing (mm/yr); for the glacier area |
-| `Refreezing_day` | Area-averaged daily refreezing (mm/d); for the glacier area|
+| `Refreezing_sfc` | Specific annual refreezing (mm/yr); for the glacier area |
+| `Refreezing_day` | Specific daily refreezing (mm/d); for the glacier area|
