@@ -18,6 +18,9 @@ The snowline from Sommer et al. (2026) is currently only available for RGIv7 reg
 A dataset for geodetic mass balance referenced to RGIv7 is not available at the moment.
 ```
 
+![Pros and cons of calibration schemes](../../images/calibration_schemes_glogem.png)
+
+
 ## Sub-pages
 
 - [Geodetic Mass Balance](GloGEM-doc-temp\docs\source\calibration\geodetic.md) — Calibration on Geodetic Mass Balance
