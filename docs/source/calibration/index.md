@@ -3,17 +3,15 @@
 GloGEM provides two options for model calibration:
 
 1. **Calibration on geodetic mass balance**: To match the long-term glacier evolution. 
-For RGIv6: this utilizes the global geodetic mass balance dataset from [Hugonnet et al. (2021)](https://www.nature.com/articles/s41586-021-03436-z).
-For RGIv7: 
+- For RGIv6: this utilizes the global geodetic mass balance dataset from [Hugonnet et al. (2021)](https://www.nature.com/articles/s41586-021-03436-z).
+- For RGIv7: 
 
 2. **Calibration on geodetic mass balance and snowlines**: Matches both long-term glacier evolution and seasonal glacier dynamics (melt and accumulation).
-For RGIv6: this utilizes the global geodetic mass balance dataset from [Hugonnet et al. (2021)](https://www.nature.com/articles/s41586-021-03436-z) & snowline data from [Loibl et al. (2025)](https://www.nature.com/articles/s41597-024-04309-6). 
-
+- For RGIv6: this utilizes the global geodetic mass balance dataset from [Hugonnet et al. (2021)](https://www.nature.com/articles/s41586-021-03436-z) & snowline data from [Loibl et al. (2025)](https://www.nature.com/articles/s41597-024-04309-6). 
 ```{note}
 The snowline from Loibl et al. (2025) is currently only available for RGIv6 region 13-15, and glaciers larger than 0.5km^2. 
 ```
-For RGIv7: snowline data from [Sommer et al. (2026)](https://doi.org/10.5194/essd-2026-35).
-
+- For RGIv7: snowline data from [Sommer et al. (2026)](https://doi.org/10.5194/essd-2026-35).
 ```{note}
 The snowline from Sommer et al. (2026) is currently only available for RGIv7 region 11, and has not been tested in GloGEM yet! 
 ```
