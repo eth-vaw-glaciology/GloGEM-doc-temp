@@ -85,17 +85,17 @@ When `debris_supraglacial = 'y'`, melt of debris-covered ice is modified in `pro
 | Parameter | Default | Description |
 |-----------|---------|-------------|
 | `meltmodel` | `'1'` | Melt model selection: `'1'` = DDF, `'3'` = energy balance |
-| `DDFsnow` | 3 | Degree-day factor for snow [mm d⁻¹ °C⁻¹] (calibrated) |
-| `DDFice` | 6 | Degree-day factor for ice [mm d⁻¹ °C⁻¹] (calibrated) |
-| `T_melt` | 0 | Temperature threshold for melt [°C] |
+| `DDFsnow` | 3 | Degree-day factor for snow (mm d⁻¹ °C⁻¹) (calibrated) |
+| `DDFice` | 6 | Degree-day factor for ice (mm d⁻¹ °C⁻¹) (calibrated) |
+| `t_melt` | 0 | Temperature threshold for melt (°C) |
 | `submonth_variability` | `'y'` | Include sub-monthly temperature variability (monthly model only) |
+| `mel` || Melt per elevation band per time step [m w.e.] |
 
 ## Outputs
 
 | Variable | Description |
 |----------|-------------|
-| `mel` | Melt per elevation band per time step [m w.e.] |
-| `smelt[ye]` | Area-averaged annual snowmelt [m w.e.] |
-| `imelt[ye]` | Area-averaged annual ice/firn melt [m w.e.] |
-| `snowmel` | Daily snowmelt per band (daily model only) |
-| `icemel` | Daily ice/firn melt per band (daily model only) |
+| `Snowmelt_sfc` | Area-averaged annual snowmelt (mm/yr); for the initially glacierized area |
+| `Icemelt_sfc` | Area-averaged annual ice/firn melt (mm/yr); for the glacier area|
+| `Snowmelt_day` | Area-averaged daily snowmelt (mm/d); for the initially glacierized area |
+| `Icemelt_day` | Area-averaged daily icemelt (mm/d); for the glacier area|
