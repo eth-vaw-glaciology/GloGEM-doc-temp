@@ -59,12 +59,21 @@ $$
 | `T_thres` | 1.5 | Snow–rain temperature threshold [°C] |
 | `snow_multiplier` | 1.2 | Additional scaling factor applied to snowfall |
 | `no_incprec` | [0.75, 1000, 2, 2] | High-elevation precipitation reduction: [elevation fraction, minimum elevation range (m), parameter a, parameter b] |
+| `psg` || Snowfall per elevation band [m w.e.] |
+| `plg` || Rainfall per elevation band [m w.e.] |
 
 ## Outputs
 
+GloGEM provides specific rain in (mm/d, or mm/myr) for the initially glacierized area, glacier area-averaged annual and daily accumulation in (m.w.e.), and annual Accumulation Area (km^2).
+
 | Variable | Description |
 |----------|-------------|
-| `psg` | Snowfall per elevation band [m w.e.] |
-| `plg` | Rainfall per elevation band [m w.e.] |
-| `accum[ye]` | Area-averaged annual accumulation [m w.e.] |
-| `rain[ye]` | Area-averaged annual rainfall [m w.e.] |
+
+| `Rain_day` | Daily specific rain on initially glacierized area (mm/d)  |
+| `Rain_sfc` | Annual specific rain on initially glacierized area (mm/yr) |
+| `Accumulation_day` | Daily glacier-specific accumulation (m.w.e.) |
+| `Accumulation_sfc` | Annual glacier-specific accumulation (m.w.e) |
+| `AAR` | Annual glacier-specific accumulation area (km^2)|
+
+
+
