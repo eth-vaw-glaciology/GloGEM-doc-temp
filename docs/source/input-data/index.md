@@ -8,7 +8,5 @@ For questions about data access, contact L.V.T., A.V.D.E., or M.H.
 
 | Section | Contents |
 |---------|----------|
-| [Climate data](climate-data.md) | Reanalysis products and GCM projections |
-| [Bias correction](bias-correction.md) | Downscaling and bias-correction of GCM data |
-| [Geometric data](geometric-data.md) | RGI glacier inventory, hypsometry, and ice thickness |
-| [Debris observations](debris-observations.md) | Supraglacial debris cover data |
+| [Climate data](climate-data.md) | Reanalysis products, GCM projections, and bias correction |
+| [Geometric data](geometric-data.md) | RGI glacier inventory, hypsometry, ice thickness, and debris observations |
