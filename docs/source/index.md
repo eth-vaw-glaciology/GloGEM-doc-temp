@@ -38,6 +38,7 @@ model-description/glacier-dynamics/retreat-model
 model-description/glacier-dynamics/calving-model
 model-description/debris-model
 model-description/solar-radiation
+model-description/discharge
 ```
 
 ```{toctree}
