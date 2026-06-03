@@ -187,6 +187,10 @@ To prevent unrealistic corrections in high-latitude or data-sparse regions, extr
 
 ### Method 2 — Quantile mapping
 
+```{note}
+This downscaling method is currently being implemented and tested in GloGEM.
+```
+
 Selected with `bias_correction_method = 2`. Available for daily temperature only. Builds empirical cumulative distribution functions (CDFs) at 1001 quantile levels for:
 
 - Reanalysis historical period
