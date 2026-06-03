@@ -55,12 +55,12 @@ $$
 | Parameter | Default | Description |
 |-----------|---------|-------------|
 | `c_prec` | 1.5 | Precipitation correction factor (calibrated) |
-| `dPdz` | 1.5 | Precipitation gradient [% per 100 m] |
+| `dPdz` | 1.5 | Precipitation gradient (% per 100 m) |
 | `T_thres` | 1.5 | Snow–rain temperature threshold [°C] |
 | `snow_multiplier` | 1.2 | Additional scaling factor applied to snowfall |
-| `no_incprec` | [0.75, 1000, 2, 2] | High-elevation precipitation reduction: [elevation fraction, minimum elevation range (m), parameter a, parameter b] |
-| `psg` || Snowfall per elevation band [m w.e.] |
-| `plg` || Rainfall per elevation band [m w.e.] |
+| `no_incprec` | (0.75, 1000, 2, 2) | High-elevation precipitation reduction: [elevation fraction, minimum elevation range (m), parameter a, parameter b] |
+| `psg` || Snowfall per elevation band (m w.e.) |
+| `plg` || Rainfall per elevation band (m w.e.) |
 
 ## Outputs
 
