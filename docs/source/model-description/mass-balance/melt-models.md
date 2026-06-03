@@ -54,10 +54,10 @@ $$
 
 where:
 - $\alpha$ is the surface albedo (snow, firn, or ice)
-- $SW$ is the potential shortwave radiation [W m⁻²]
-- $C_0$ is a constant offset term [W m⁻²]
-- $C_1$ is the temperature sensitivity coefficient [W m⁻² °C⁻¹]
-- $L_f$ is the latent heat of fusion [J kg⁻¹]
+- $SW$ is the potential shortwave radiation (W m⁻²)
+- $C_0$ is a constant offset term (W m⁻²)
+- $C_1$ is the temperature sensitivity coefficient (W m⁻² °C⁻¹)
+- $L_f$ is the latent heat of fusion (J kg⁻¹)
 - $\Delta t$ is the number of days in the time step
 
 Negative melt values are set to zero.
