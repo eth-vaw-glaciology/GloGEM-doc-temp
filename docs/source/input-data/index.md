@@ -4,8 +4,6 @@ GloGEM relies on various input datasets for glacier modelling, including climate
 
 As of March 2025, these datasets are only accessible to ETH VAW members, stored on the institute's shared storage (`/itet-stor/[username]/glogem/`). Public access is planned for the future.
 
-For questions about data access, contact L.V.T., A.V.D.E., or M.H.
-
 | Section | Contents |
 |---------|----------|
 | [Climate data](climate-data.md) | Reanalysis products, GCM projections, and bias correction |
