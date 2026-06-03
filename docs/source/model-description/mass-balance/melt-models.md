@@ -21,20 +21,20 @@ Selected with `meltmodel = '1'`. This is the default and computationally lightes
 Melt for each elevation band is proportional to positive air temperature:
 
 $$
-M = \text{DDF}_{\text{surface}} \cdot T^+ \cdot \Delta t / 1000
+M = \text{DDF}_{\text{surface}} \cdot T^+
 $$
 
-where $T^+$ is temperature above the melt threshold `T_melt` [°C], $\Delta t$ is the number of days in the time step, and the result is in m w.e.
+where $T^+$ is the daily/monthly mean air temperature (°C).
 
 Degree-day factors by surface type:
 
-| Surface | DDF |
-|---------|-----|
+| Surface | DDF (relative to `DDFsnow`) |
+|---------|-----------------------------|
 | Snow | `DDFsnow` |
-| Firn | `(DDFsnow + DDFice) / 2` |
-| Ice | `DDFice` |
+| Firn | `DDFice / 1.5` |
+| Ice | `2.0 × DDFsnow` |
 
-`DDFsnow` and `DDFice` are calibration parameters; `DDFice` is constrained to equal `2 × DDFsnow` during calibration Phase 2 (default).
+`DDFsnow` is a primary calibration parameter. `DDFice` and `DDFfirn` are derived from `DDFsnow` using fixed ratios: `DDFice / DDFsnow = 2.0` and `DDFice / DDFfirn = 1.5`.
 
 ### Sub-monthly variability
 
