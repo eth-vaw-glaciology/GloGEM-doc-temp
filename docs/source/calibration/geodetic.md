@@ -1,9 +1,5 @@
 # Calibration on Geodetic Mass Balance
 
-```{note}
-This section is under development.
-```
-
 In this calibration, the target is the **geodetic glacier mass balance** over a certain time period. This is a calibration that is typically used for Global Glacier Models.
 
 The calibration process in GloGEM involves looping through **three calibration phases** in sequence:
