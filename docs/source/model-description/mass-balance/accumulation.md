@@ -33,18 +33,13 @@ For elevation bands above a critical height $z_{\text{crit}}$—defined as the f
 
 ### 4. Snow–rain partitioning
 
-Precipitation is partitioned into snowfall $P_s$ and rainfall $P_l$ based on air temperature, with a linear transition zone of ±1 °C around the threshold `T_thres`:
+Precipitation is partitioned into snowfall $P_s$ and rainfall $P_l$ based on air temperature, with a linear transition zone of ±1.5 °C around the threshold `T_thres`:
 
 $$
-P_s = \begin{cases}
-P(z) & \text{if } T < T_{\text{thres}} - 1 \\
-P(z) \cdot \dfrac{-(T - T_{\text{thres}} - 1)}{2} & \text{if } T_{\text{thres}} - 1 \leq T \leq T_{\text{thres}} + 1 \\
-0 & \text{if } T > T_{\text{thres}} + 1
+P_c = \begin{cases}
+P(s) & \text{if } T < T_{\text{thres}} - 1 \\
+P(l) & \text{if } T > T_{\text{thres}} + 1
 \end{cases}
-$$
-
-$$
-P_l = P(z) - P_s
 $$
 
 ### 5. Snow multiplier
