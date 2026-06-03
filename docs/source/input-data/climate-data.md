@@ -1,4 +1,7 @@
 # Climate Data
+```{note}
+This section might be updated when new climate data becomes available.
+```
 
 GloGEM requires gridded near-surface air temperature and precipitation for both the historical (reanalysis) and future (GCM) periods. All climate files are stored on the VAW shared storage under:
 
@@ -119,30 +122,35 @@ climatedata/future/<time_resolution>/long_<GCM_data>/<region>/...
 
 
 The active product is set with `GCM_data` in `config.pro` or `settings.pro`.
-### Available CMIP6 models
-
-| Model |
-|-------|
-| BCC-CSM2-MR |
-| CAMS-CSM1-0 |
-| CESM2 |
-| CESM2-WACCM |
-| EC-Earth3 |
-| EC-Earth3-Veg |
-| FGOALS-f3-L |
-| GFDL-ESM4 |
-| INM-CM4-8 |
-| INM-CM5-0 |
-| MPI-ESM1-2-HR |
-| MRI-ESM2-0 |
-| NorESM2-MM |
 
 ### Available SSPs
+Depending on the GCM data and the region different ssps are available.
 
 `ssp119`, `ssp126`, `ssp245`, `ssp370`, `ssp534-over`, `ssp585`
 
 ### Variables
+#### Daily model
+Each file is has a plain-text header followed by the data arrays. The header contains grid dimensions, time vector, and coordinate arrays.
 
+Below an example of how the files look like:
+
+```
+Meteorological data for ERA5-land grid cell 6.70(lon)_45.30(lat)
+Grid cell elevation (masl): 2404.8
+Year  Month  DOY  decimal.time  temp(degC)  prec(mm)  dT/dz(deg/100m)
+1950     1     1    1950.0000    -10.060      0.016   -0.58157
+1950     1     2    1950.0026     -8.231      0.008   -0.58157
+
+```
+
+| Variable | Description |
+|----------|-------------|
+| `temp(degC)` | Air temperature per grid cell per time step (°C) |
+| `prec(mm)` | Precipitation per grid cell per time step (mm d⁻¹) |
+| `dtdz(deg/100m)` | Temperature gradient per grid cell|
+
+
+#### Monthly model
 | Variable | Description |
 |----------|-------------|
 | `gcm_temp` | GCM air temperature (°C) |
