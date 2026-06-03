@@ -10,7 +10,7 @@ Melt rates depend on surface type, tracked per elevation band:
 |------|---------|---------|
 | `0` | Bare ice | `DDFice` or ice albedo |
 | `1` | Snow | `DDFsnow` or snow albedo |
-| `2` | Firn | Average of ice and snow DDF, or firn albedo |
+| `2` | Firn | `DDFfirn` or firn albedo |
 
 ---
 
