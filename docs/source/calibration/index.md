@@ -23,5 +23,5 @@ A dataset for geodetic mass balance referenced to RGIv7 is not available at the 
 
 ## Sub-pages
 
-- [Geodetic Mass Balance](GloGEM-doc-temp\docs\source\calibration\geodetic.md) — Calibration on Geodetic Mass Balance
-- [Snowline](GloGEM-doc-temp\docs\source\calibration\snowline.md) — Calibration on Snowlines and Geodetic Mass Balance
+- [Geodetic Mass Balance](geodetic.md) — Calibration on Geodetic Mass Balance
+- [Snowline](snowline.md) — Calibration on Snowlines and Geodetic Mass Balance
