@@ -36,7 +36,7 @@ The active product is set with `reanalysis` in `config.pro` or `settings.pro`.
 For the **daily** model version the reanalysis data is given in the following format:
 | File | Contents |
 |------|----------|
-| `clim_<lon>_<lat>.dat` | Temperature and Precipitation (in corresponding <time resolution>) for each reanalysis grid stored as .dat files. <lon> and <lat> refer to the center coordinates of each grid cell. |
+| `clim_<lon>_<lat>.dat` | Temperature and Precipitation for each reanalysis grid stored as .dat files. lon and lat refer to the center coordinates of each grid cell. |
 | `longitudes.dat` | List of all longitudes of the reanalysis grid cells. |
 | `latitudes.dat` | List of all latitudes of the reanalysis grid cells |
 
