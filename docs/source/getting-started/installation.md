@@ -6,7 +6,7 @@ This section is under development.
 
 ## Requirements
 
-- IDL (Interactive Data Language) — version X or later
+- IDL (Interactive Data Language) — version IDL 9.0.0  or later
 - Access to the GloGEM data shares (ETH VAW members only at present)
 
 ## Getting the code
