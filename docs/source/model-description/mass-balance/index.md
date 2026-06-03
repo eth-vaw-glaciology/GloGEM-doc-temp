@@ -6,7 +6,7 @@ $$
 b = \text{accumulation} - \text{melt} + \text{refreezing}
 $$
 
-The model tracks three surface types per elevation band:
+During the calculation of the mass balance GloGEM tracks three surface types per elevation band:
 
 | Code | Surface |
 |------|---------|
@@ -15,6 +15,15 @@ The model tracks three surface types per elevation band:
 | `2` | Firn |
 
 Surface type controls which melt factor or albedo is applied. The transition between snow and firn depends on whether the snow cover persists from one year to the next.
+
+## Outputs
+
+GloGEM provides glacier-wide aggregated and for each elevation band surface mass balance values as outputs:
+
+| Variable | Description | 
+|----------|-------------|
+| Annual balance | Glacier-specific annual surface mass balance (m w.e.) |
+| Winter balance | Glacier-specific winter surface mass balance (m w.e.) |
 
 ## Sub-pages
 
