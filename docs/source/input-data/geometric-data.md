@@ -67,43 +67,22 @@ geometricdata/rgiv<version>/bands/bands_HF2012/<region>/<RGI_ID>.dat
 
 Plain-text file with a 5-line header followed by one row per elevation band. Each row contains 12 columns:
 
-| Column index | Variable | Description |
-|-------------|----------|-------------|
-| 0 | Surface elevation | Band mid-point elevation (m a.s.l.) |
-| 1 | Ice thickness | Mean ice thickness in band (m) |
-| 2 | Slope | Mean surface slope (°) |
-| 3 | Area | Band area (km²) |
-| 4–11 | Additional geometry | Width, length, bed elevation, and other band properties |
+| Column index | Variable | Unit | Description |
+|-------------|----------|------|-------------|
+| 0 | Band-ID | (—) | Sequential band index |
+| 1 | Elev_start | (m a.s.l.) | Lower boundary of elevation band |
+| 2 | Elev_end | (m a.s.l.) | Upper boundary of elevation band |
+| 3 | Area | (km²) | Band area |
+| 4 | Thickness | (m) | Mean ice thickness |
+| 5 | Width | (m) | Mean glacier width |
+| 6 | Length | (m) | Band length |
+| 7 | Slope | (°) | Mean surface slope |
+| 8 | Aspect | (—) | Dominant aspect class |
+| 9 | b_app | (m a⁻¹) | Apparent mass balance |
+| 10 | Basal_stress | (bar) | Basal shear stress |
+| 11 | Shape_factor | (—) | Valley shape factor |
 
-Elevation bands are spaced at 10 m vertical intervals. Bands are ordered from the lowest (terminus) to the highest (headwall) elevation.
-
----
-
-## Regional parameter file
-
-Region-specific calibration parameters (calving coefficient, precipitation correction, lapse rate, temperature offset) are stored in a single table per reanalysis product:
-
-### Storage path
-
-```
-/itet-stor/<username>/glogem/data/regional_parameters_<reanalysis>.dat
-```
-
-One row per RGI region (and sub-region where applicable). Read by `procedures/read/read_regionalparams.pro` at the start of each regional run.
-
----
-
-## Geothermal heat flux
-
-Required only when the englacial temperature model is active (`firnice_temperature = 'y'`).
-
-### Storage path
-
-```
-/itet-stor/<username>/glogem/data/geothermal_flux.grid
-```
-
-Global gridded geothermal heat flux in standard ESRI ASCII raster format. Values are stored in mW m⁻² and converted to W m⁻² on read.
+Elevation bands are 10 m wide (Elev_end − Elev_start = 10 m). Bands are ordered from the lowest (terminus) to the highest (headwall) elevation. Columns 9–11 use −9.0 as a no-data fill value where observations are unavailable.
 
 ---
 
