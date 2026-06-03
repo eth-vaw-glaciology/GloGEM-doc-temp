@@ -19,3 +19,4 @@ The model is forced by gridded near-surface air temperature and precipitation. F
 | [Calving](glacier-dynamics/calving-model.md) | Frontal ablation for marine-terminating glaciers |
 | [Debris model](debris-model.md) | Evolution of supraglacial debris cover and its effect on melt |
 | [Solar radiation](solar-radiation.md) | Potential shortwave radiation for the energy-balance melt model |
+| [Discharge](discharge.md) | Glacier discharge|
