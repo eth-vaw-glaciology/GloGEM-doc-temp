@@ -22,8 +22,8 @@ climatedata/reanalysis/<time_resolution>/<reanalysis>/<region>/
 
 | Setting value | Product | Time resolution | Period|
 |---------------|---------|----------------|--------|
-| `era5` | ERA5 (ECMWF) | Daily (default) | 1940-2025 |
-| `ERA5` | ERA5 (ECMWF) | Monthly (auto-selected) | 1950-2025 |
+| `era5` | ERA5 (ECMWF) | Daily | 1940-2025 |
+| `ERA5` | ERA5 (ECMWF) | Monthly | 1950-2025 |
 | `era5land` | ERA5-Land | Daily | 1950-2025 |
 | `chelsaw5e5` | CHELSA-W5E5 | Daily | 1979-2016 |
 | `ch2018` | CH2018 | Daily | |
