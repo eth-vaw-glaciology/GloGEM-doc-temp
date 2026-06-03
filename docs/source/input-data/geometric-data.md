@@ -20,16 +20,30 @@ geometricdata/rgiv<version>/bands/files/thick_<region>.dat
 
 ### Contents
 
-One row per glacier, 19 columns including:
+One row per glacier (semicolon-delimited ID, then 19 space-separated values):
 
-| Column | Variable | Description |
-|--------|----------|-------------|
-| 0–1 | `lon`, `lat` | Glacier centroid coordinates (°) |
-| 2 | `a_gl` | Glacier area (km²) |
-| 3 | `volume_ini` | Initial ice volume (km³) |
-| 6 | `hmin` | Minimum surface elevation (m a.s.l.) |
-| 8 | `hmed` | Median surface elevation (m a.s.l.) |
-| 18 | `survey_year` | RGI inventory survey year |
+| Column (0-based) | Variable | Unit | Description |
+|-----------------|----------|------|-------------|
+| ID | — | — | RGI glacier ID |
+| 0 | `lon_gl` | (°) | Glacier centroid longitude |
+| 1 | `lat_gl` | (°) | Glacier centroid latitude |
+| 2 | `a_gl` | (km²) | Glacier area |
+| 3 | `volume_ini` | (km³) | Initial ice volume |
+| 4 | THICK_mean | (m) | Mean ice thickness |
+| 5 | THICK_max | (m) | Maximum ice thickness |
+| 6 | `hmin` | (m a.s.l.) | Minimum surface elevation |
+| 7 | ELEV_max | (m a.s.l.) | Maximum surface elevation |
+| 8 | `hmed` | (m a.s.l.) | Median surface elevation |
+| 9 | LENGTH | (km) | Glacier length |
+| 10 | SLOPE_avg | (°) | Average surface slope |
+| 11 | SLOPE_band | (°) | Average band slope |
+| 12 | TAU_avg | (bar) | Average basal shear stress |
+| 13 | TAU_min | (bar) | Minimum basal shear stress |
+| 14 | TAU_max | (bar) | Maximum basal shear stress |
+| 15 | SF_avg | (—) | Average shape factor |
+| 16 | SF_min | (—) | Minimum shape factor |
+| 17 | R_V | (—) | Volume ratio |
+| 18 | `survey_year` | (—) | RGI inventory survey year |
 
 ---
 
