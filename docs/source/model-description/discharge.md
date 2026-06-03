@@ -15,6 +15,8 @@ where:
 - $P_{\text{rain}}$ is the rainfall (See [Accumulation](GloGEM-doc-temp\docs\source\model-description\mass-balance\accumulation.md)).
 - $R$ is the refreezing within the snowpack and firn (See [Refreezing](GloGEM-doc-temp\docs\source\model-description\mass-balance\refreezing.md)).
 
+In this simplified runoff representation, we do not include other hydrological processes such as evapotranspiration, groundwater recharge, or land-cover changes.
+
 ## Outputs
 
 | Variable | Description |
