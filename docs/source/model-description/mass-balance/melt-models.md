@@ -95,7 +95,7 @@ When `debris_supraglacial = 'y'`, melt of debris-covered ice is modified in `pro
 
 | Variable | Description |
 |----------|-------------|
-| `Snowmelt_sfc` | Area-averaged annual snowmelt (mm/yr); for the initially glacierized area |
-| `Icemelt_sfc` | Area-averaged annual ice/firn melt (mm/yr); for the glacier area|
-| `Snowmelt_day` | Area-averaged daily snowmelt (mm/d); for the initially glacierized area |
-| `Icemelt_day` | Area-averaged daily icemelt (mm/d); for the glacier area|
+| `Snowmelt_sfc` | Specific annual snowmelt (mm/yr); for the initially glacierized area |
+| `Icemelt_sfc` | Specific annual ice/firn melt (mm/yr); for the glacier area|
+| `Snowmelt_day` | Specific daily snowmelt (mm/d); for the initially glacierized area |
+| `Icemelt_day` | Specific daily icemelt (mm/d); for the glacier area|
