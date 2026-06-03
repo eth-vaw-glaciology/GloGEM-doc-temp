@@ -44,8 +44,5 @@ Each glacier is calibrated individually using the reanalysis product specified i
 - Only performed if both `cprec` and `ddf` fail to yield a sufficient match with the geodetic target.
 
 ---
-![Pros and cons of calibration schemes](../../images/calibration_schemes_glogem_doc.png)
+![Calibration on Geodetic Mass Balance calibration scheme. Overview of the three calibration phases.](../../images/conceptual_calibration_sketch_gmb.png)
 
-
-
-Figure: Conceptual sketch of the calibration loop for the calibration aimed towards the geodetic mass balance. Parameter ranges in the figure are the default boundaries that can be adjusted.
