@@ -18,33 +18,65 @@ Reanalysis data provides the reference climate for the calibration period and is
 climatedata/reanalysis/<time_resolution>/<reanalysis>/<region>/
 ```
 
-| File | Contents |
-|------|----------|
-| `clim_<region>.mdi` | Gridded monthly (or daily) temperature and precipitation fields |
-| `variability_<region>.mdi` | Daily within-month temperature anomaly patterns (required when `submonth_variability = 'y'`) |
-| `tgrad_<region>.mdi` | Monthly vertical temperature gradient fields |
-
-Each file is a custom binary format with a plain-text header (`.mdi`) followed by the data arrays. The header contains grid dimensions, time vector, and coordinate arrays.
-
 ### Available reanalysis products
 
-| Setting value | Product | Time resolution |
-|---------------|---------|----------------|
-| `era5` | ERA5 (ECMWF) | Daily (default) |
-| `ERA5` | ERA5 (ECMWF) | Monthly (auto-selected) |
-| `era5land` | ERA5-Land | Daily |
-| `chelsaw5e5` | CHELSA-W5E5 | Daily |
-| `ch2018` | CH2018 | Daily |
-| `gswp3w5e5` | GSWP3-W5E5 | Daily |
+| Setting value | Product | Time resolution | Period|
+|---------------|---------|----------------|--------|
+| `era5` | ERA5 (ECMWF) | Daily (default) | 1940-2025 |
+| `ERA5` | ERA5 (ECMWF) | Monthly (auto-selected) | 1950-2025 |
+| `era5land` | ERA5-Land | Daily | 1950-2025 |
+| `chelsaw5e5` | CHELSA-W5E5 | Daily | 1979-2016 |
+| `ch2018` | CH2018 | Daily | |
+| `gswp3w5e5` | GSWP3-W5E5 | Daily | 1901-2019 |
 
 The active product is set with `reanalysis` in `config.pro` or `settings.pro`.
+
+### Reanalysis for the daily model version
+
+For the **daily** model version the reanalysis data is given in the following format:
+| File | Contents |
+|------|----------|
+| `clim_<lon>_<lat>.dat` | Temperature and Precipitation (in corresponding <time resolution>) for each reanalysis grid stored as .dat files. <lon> and <lat> refer to the center coordinates of each grid cell. |
+| `longitudes.dat` | List of all longitudes of the reanalysis grid cells. |
+| `latitudes.dat` | List of all latitudes of the reanalysis grid cells |
+
+Each file is has a plain-text header followed by the data arrays. The header contains grid dimensions, time vector, and coordinate arrays.
+
+Below an example of how the files look like:
+
+```
+Meteorological data for ERA5-land grid cell 6.70(lon)_45.30(lat)
+Grid cell elevation (masl): 2404.8
+Year  Month  DOY  decimal.time  temp(degC)  prec(mm)  dT/dz(deg/100m)
+1950     1     1    1950.0000    -10.060      0.016   -0.58157
+1950     1     2    1950.0026     -8.231      0.008   -0.58157
+
+```
+#### Variables
+
+| Variable | Description |
+|----------|-------------|
+| `temp(degC)` | Air temperature per grid cell per time step (°C) |
+| `prec(mm)` | Precipitation per grid cell per time step (mm d⁻¹) |
+| `dtdz(deg/100m)` | Temperature gradient per grid cell|
+
+
+### Reanalysis for the monthly model version
+For the **monthly** model version the reanalysis data is given in the following format:
+| File | Contents |
+|------|----------|
+| `clim_<region>.mdi` | Gridded monthly temperature and precipitation fields. |
+| `variability_<region>.mdi` | List of all longitudes of the reanalysis grid cells. |
+| `tgrad_<region>.mdi` | Monthly vertical temperature gradient fields |
+
+Each file is a custom binary format with a plain-text header (.mdi) followed by the data arrays. The header contains grid dimensions, time vector, and coordinate arrays.
 
 ### Variables
 
 | Variable | Description |
 |----------|-------------|
 | `rtemp` | Air temperature per grid cell per time step (°C) |
-| `rprec` | Precipitation per grid cell per time step (mm d⁻¹) |
+| `rprec` | Precipitation per grid cell per time step (mm month⁻¹) |
 | `relev` | Grid cell reference elevation (m a.s.l.) |
 | `rtg` | Monthly vertical temperature gradient (°C m⁻¹) |
 | `rvariab` | Daily temperature anomaly patterns within each month |
