@@ -8,19 +8,17 @@ The file `procedures/initialise/settings.pro` contains all model settings commit
 
 Do not add personal paths or experiment-specific values here. Changes to this file affect everyone working from the same repository.
 
-## Personal overrides: `~/.glogem/config.pro`
+## Personal overrides: `config.pro`
 
-Each user maintains a personal config file at `~/.glogem/config.pro`. This file lives in your home directory and is never touched by git. Any setting from `settings.pro` can be overridden here.
+Each user maintains a personal `config.pro` in the root of the repository. This file is listed in `.gitignore` and will never be accidentally committed. Any setting from `settings.pro` can be overridden here.
 
 ### One-time setup per machine
 
 ```bash
-cd /path/to/GloGEM      # must be run from inside the repository
-mkdir -p ~/.glogem
-cp config.pro.example ~/.glogem/config.pro
+cp config.pro.example config.pro
 ```
 
-Then open `~/.glogem/config.pro` and set at minimum your output directory:
+Then open `config.pro` and set at minimum your output directory:
 
 ```idl
 dirres = '/path/to/your/output/directory'
