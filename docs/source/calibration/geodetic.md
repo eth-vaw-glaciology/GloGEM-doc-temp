@@ -44,5 +44,5 @@ Each glacier is calibrated individually using the reanalysis product specified i
 - Only performed if both `cprec` and `ddf` fail to yield a sufficient match with the geodetic target.
 
 ---
-![Calibration on Geodetic Mass Balance calibration scheme. Overview of the three calibration phases.](../../images/conceptual_calibration_sketch_gmb.png)
+![Calibration on Geodetic Mass Balance calibration scheme. Overview of the three calibration phases.](../images/conceptual_calibration_sketch_gmb.png)
 
