@@ -18,4 +18,5 @@ The model is forced by gridded near-surface air temperature and precipitation. F
 | [Glacier retreat](glacier-dynamics/retreat-model.md) | Volume–area–length scaling to update glacier geometry annually |
 | [Calving](glacier-dynamics/calving-model.md) | Frontal ablation for marine-terminating glaciers |
 | [Debris model](debris-model.md) | Evolution of supraglacial debris cover and its effect on melt |
+| [Firn and ice temperature](mass-balance/firn-ice-temperature.md) | Englacial temperature model |
 | [Discharge](discharge.md) | Glacier discharge|
