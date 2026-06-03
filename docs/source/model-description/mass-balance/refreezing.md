@@ -71,15 +71,17 @@ The calculation distinguishes between firn surfaces (where the full column is av
 |-----------|---------|-------------|
 | `refreezing_parametrised` | `'y'` | Activate parametrised refreezing |
 | `refreezing_full` | `'n'` | Activate full heat-conduction refreezing (overrides parametrised) |
-| `rf_melcrit` | 0.02 | Minimum melt to trigger refreezing [m w.e.] |
+| `rf_melcrit` | 0.02 | Minimum melt to trigger refreezing (m w.e.) |
 | `rf_layers` | 8 | Number of vertical layers in full model |
-| `rf_dz` | 1.0 | Layer thickness [m] |
+| `rf_dz` | 1.0 | Layer thickness (m) |
 | `rf_dsc` | 3 | Sub-timestep factor for numerical stability |
-| `dens_rf` | [300, 300, 400, 450, 500, 550, 600, 650] | Density profile [kg m⁻³] |
+| `dens_rf` | [300, 300, 400, 450, 500, 550, 600, 650] | Density profile (kg m⁻³) |
+| `refr` | |Refreezing per elevation band per time step (m w.e.) |
+| `refre[ye]`| | Area-averaged annual refreezing (m w.e.) |
 
 ## Outputs
 
 | Variable | Description |
 |----------|-------------|
-| `refr` | Refreezing per elevation band per time step [m w.e.] |
-| `refre[ye]` | Area-averaged annual refreezing [m w.e.] |
+| `Refreezing_sfc` | Area-averaged annual refreezing (mm/yr); for the glacier area |
+| `Refreezing_day` | Area-averaged daily refreezing (mm/d); for the glacier area|
