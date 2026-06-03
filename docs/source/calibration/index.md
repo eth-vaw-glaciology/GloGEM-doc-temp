@@ -19,7 +19,7 @@ A dataset for geodetic mass balance referenced to RGIv7 is not available at the 
 ```
 
 ![Pros and cons of calibration schemes](../images/calibration_schemes_glogem_doc.png)
-
+Pros and cons of calibration schemes
 
 ## Sub-pages
 
