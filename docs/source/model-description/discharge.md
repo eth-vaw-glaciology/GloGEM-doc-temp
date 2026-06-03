@@ -2,6 +2,8 @@
 
 GloGEM calculates glacier discharge. Here we can distinguish between two types: `Discharge` (representing the initially glacierized area) and `Discharge_gl` (representing the current (evolving) glacier area).
 
+Implemented in `procedures/processing/calculate_catchment_discharge.pro`.
+
 The discharge $Q$ is computed as the sum of all liquid water components exiting the glacier system minus refreezing:
 
 $$
