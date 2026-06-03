@@ -45,4 +45,5 @@ Each glacier is calibrated individually using the reanalysis product specified i
 
 ---
 ![Calibration on Geodetic Mass Balance calibration scheme. Overview of the three calibration phases.](../images/conceptual_calibration_sketch_gmb.png)
+Calibration on Geodetic Mass Balance calibration scheme. Overview of the three calibration phases.
 
