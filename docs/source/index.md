@@ -47,9 +47,7 @@ model-description/discharge
 
 input-data/index
 input-data/climate-data
-input-data/bias-correction
 input-data/geometric-data
-input-data/debris-observations
 ```
 
 ```{toctree}
