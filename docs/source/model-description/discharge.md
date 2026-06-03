@@ -1,0 +1,23 @@
+# Glacier Discharge
+
+GloGEM calculates glacier discharge. Here we can distinguish between two types: `Discharge` (representing the initially glacierized area) and `Discharge_gl` (representing the current (evolving) glacier area).
+
+The discharge $Q$ is computed as the sum of all liquid water components exiting the glacier system minus refreezing:
+
+$$
+Q = M_{\text{snow}} + M_{\text{firn}} + M_{\text{ice}} + P_{\text{rain}} - R
+$$
+
+where:
+- $M_{\text{snow}}, M_{\text{firn}}, M_{\text{ice}}$ are the melt from snow, firn, and ice, respectively (See [Meltmodel](GloGEM-doc-temp\docs\source\model-description\mass-balance\melt-models.md)).
+- $P_{\text{rain}}$ is the rainfall (See [Accumulation](GloGEM-doc-temp\docs\source\model-description\mass-balance\accumulation.md)).
+- $R$ is the refreezing within the snowpack and firn (See [Refreezing](GloGEM-doc-temp\docs\source\model-description\mass-balance\refreezing.md)).
+
+## Outputs
+
+| Variable | Description |
+|----------|-------------|
+| `Discharge` | Specific daily/monthly discharge (mm); for the initially glacierized area |
+| `Discharge_gl` | Specific daily/monthly discharge (mm); for the glacier area |
+
+
