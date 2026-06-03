@@ -10,3 +10,4 @@ For questions about data access, contact L.V.T., A.V.D.E., or M.H.
 |---------|----------|
 | [Climate data](climate-data.md) | Reanalysis products, GCM projections, and bias correction |
 | [Geometric data](geometric-data.md) | RGI glacier inventory, hypsometry, ice thickness, and debris observations |
+| [Ancillary data](ancillary-data.md) | Regional parameter tables and geothermal heat flux grid |
