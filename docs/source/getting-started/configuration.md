@@ -15,6 +15,7 @@ Each user maintains a personal config file at `~/.glogem/config.pro`. This file 
 ### One-time setup per machine
 
 ```bash
+cd /path/to/GloGEM      # must be run from inside the repository
 mkdir -p ~/.glogem
 cp config.pro.example ~/.glogem/config.pro
 ```
