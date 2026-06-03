@@ -71,7 +71,7 @@ running-glogem/output-files
 :caption: Calibration
 
 calibration/index
-calibration/glacier-specific
+calibration/geodetic
 calibration/snowline
 ```
 
