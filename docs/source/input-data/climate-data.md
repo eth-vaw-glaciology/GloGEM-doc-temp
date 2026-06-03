@@ -89,6 +89,13 @@ GCM projections are bias-corrected against the reanalysis reference and used for
 
 ### Storage path
 
+#### Daily
+
+```
+climatedata/future/<time_resolution>/<GCM_data>/<region>/<GCM_model>/<SSP>/
+```
+
+#### Monthly
 ```
 climatedata/future/<time_resolution>/<GCM_data>/<region>/<GCM_model>/
     <GCM_model>_<SSP>_<experiment>_<region>.mdi
@@ -100,6 +107,18 @@ For extended runs to 2300, `long_` is prepended to `<GCM_data>`:
 climatedata/future/<time_resolution>/long_<GCM_data>/<region>/...
 ```
 
+### Available GCM products
+
+| Setting value | Product | Time resolution | Period| number of GCMS|
+|---------------|---------|----------------|--------|---------------|
+| `cmip6` | CMIP6 | Monthly and Daily | until 2100 | 26|
+| `cmip6isimip3b` | CMIP6-ISIMIP3B | Daily | until 2100 | 5|
+| `gmip3` | GCMs provided for GlacierMIP3 | ? | until 2100 | 5|
+| `gmip4` | GCMs provided for GlacierMIP4 | ? | until 2100 | ?|
+| `long_cmip6` | CMIP6 | Monthly | until 2300 |11|
+
+
+The active product is set with `GCM_data` in `config.pro` or `settings.pro`.
 ### Available CMIP6 models
 
 | Model |
