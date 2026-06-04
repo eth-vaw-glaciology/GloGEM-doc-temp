@@ -19,7 +19,7 @@ To calibrate GloGEM Geodetic Mass Balance data is available.
 ### Available Geodetic Mass Balance data
 
 | Product | Spatial resolution | Periods| RGI version|
-|---------------|---------|----------------|--------|--|
+|---------|--------------------|--------|------------|
 | Hugonnet et al., 2021 | glacier-specific | 2000-2010; 2010-2020; 2000-2020 | RGIv6|
 | Hugonnet et al., 202X | glacier-specific | 2000-2010; 2010-2020; 2000-2020 | RGIv7|
 
