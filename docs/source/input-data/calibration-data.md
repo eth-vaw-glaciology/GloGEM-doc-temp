@@ -2,16 +2,16 @@
 ```{note}
 This section might be updated when new calibration data becomes available.
 ```
-
+## Data paths
 ```
 /itet-stor/<username>/glogem/data/geodetic/<RGIversion>/aggregated<time period>/
 ```
 ```
 /itet-stor/<username>/glogem/data/snowline/<RGIversion>/aggregated<time period>/
 ```
-The calibration procedure is explained in section [Calibration]
 ---
 
+The calibration procedure is explained in section [Calibration]
 ## Geodetic Mass Balance data
 
 To calibrate GloGEM Geodetic Mass Balance data is available. 
