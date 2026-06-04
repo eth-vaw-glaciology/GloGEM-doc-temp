@@ -70,6 +70,8 @@ Setting `full_output = 'y'` adds monthly or daily resolved variables to the outp
 | `Snowmelt_day` | (mm/day) | Daily snowmelt |
 | `Icemelt_day` | (mm/day) | Daily ice and firn melt |
 | `Refreezing_day` | (mm/day) | Daily refreezing |
+| `Discharge_gl` | (mm/day) | Daily refreezing |
+| `Discharge` | (mm/day) | Daily refreezing |
 | `Snowline_day` | (m a.s.l.) | Daily transient snowline altitude |
 
 ```{note}
