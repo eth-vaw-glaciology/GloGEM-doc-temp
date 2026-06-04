@@ -9,3 +9,4 @@ As of March 2025, these datasets are only accessible to ETH VAW members, stored 
 | [Climate data](climate-data.md) | Reanalysis products, GCM projections, and bias correction |
 | [Geometric data](geometric-data.md) | RGI glacier inventory, hypsometry, ice thickness, and debris observations |
 | [Ancillary data](ancillary-data.md) | Regional parameter tables and geothermal heat flux grid |
+| [Calibration data](calibration-data.md) | Data to calibrate GloGEM |
