@@ -11,7 +11,7 @@ This section might be updated when new calibration data becomes available.
 ```
 ---
 
-The calibration procedure is explained in section [Calibration](calibration/index.md)
+The calibration procedure is explained in section [Calibration](../calibration/index.md)
 ## Geodetic Mass Balance data
 
 To calibrate GloGEM Geodetic Mass Balance data is available. 
