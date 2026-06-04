@@ -33,10 +33,10 @@ Each glacier produces one output file containing an annual time series. The defa
 | `Volume` | (km³) | Glacier total ice volume |
 | `Annual_Balance_sfc` | (m w.e.) | Glacier-wide annual surface mass balance |
 | `Winter_balance_sfc` | (m w.e.) | Glacier-wide winter surface mass balance |
-| `Icemelt_sfc` | (m w.e.) | Glacier-wide annual ice and firn melt |
-| `Snowmelt_sfc` | (m w.e.) | Glacier-wide annual snowmelt |
+| `Icemelt_sfc` | (mm) | Glacier-wide annual ice and firn melt, only available for daily model |
+| `Snowmelt_sfc` | (mm) | Glacier-wide annual snowmelt, only available for daily model |
 | `Accumulation_sfc` | (m w.e.) | Glacier-wide annual snow accumulation |
-| `Rain_sfc` | (m w.e.) | Glacier-wide annual liquid precipitation |
+| `Rain_sfc` | (mm) | Glacier-wide annual liquid precipitation, only available for daily model |
 | `ELA` | (m a.s.l.) | Equilibrium line altitude |
 | `AAR` | (%) | Accumulation area ratio |
 | `Refreezing_sfc` | (m w.e.) | Glacier-wide annual refreezing |
@@ -49,17 +49,7 @@ Each glacier produces one output file containing an annual time series. The defa
 
 ## Extended output (`full_output = 'y'`)
 
-Setting `full_output = 'y'` adds monthly or daily resolved variables to the output:
-
-**Monthly model — additional variables:**
-
-| Variable | Unit | Description |
-|----------|------|-------------|
-| `Balance_mon` | (m w.e.) | Monthly mass balance |
-| `Precipitation_mon` | (m w.e.) | Monthly total precipitation |
-| `Accumulation_mon` | (m w.e.) | Monthly accumulation |
-| `Melt_mon` | (m w.e.) | Monthly melt |
-| `Refreezing_mon` | (m w.e.) | Monthly refreezing |
+Setting `full_output = 'y'` adds daily resolved variables to the output:
 
 **Daily model — additional variables:**
 
