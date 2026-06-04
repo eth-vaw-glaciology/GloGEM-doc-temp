@@ -33,23 +33,31 @@ Each glacier produces one output file containing an annual time series. The defa
 | `Volume` | (km³) | Glacier total ice volume |
 | `Annual_Balance_sfc` | (m w.e.) | Glacier-wide annual surface mass balance |
 | `Winter_balance_sfc` | (m w.e.) | Glacier-wide winter surface mass balance |
-| `Icemelt_sfc` | (mm) | Glacier-wide annual ice and firn melt, only available for daily model |
-| `Snowmelt_sfc` | (mm) | Glacier-wide annual snowmelt, only available for daily model |
+| `Icemelt_sfc` | (m/yr) | Glacier-wide annual ice and firn melt |
+| `Snowmelt_sfc` | (m/yr) | Glacier-wide annual snowmelt|
 | `Accumulation_sfc` | (m w.e.) | Glacier-wide annual snow accumulation |
-| `Rain_sfc` | (mm) | Glacier-wide annual liquid precipitation, only available for daily model |
+| `Rain_sfc` | (m/yr) | Glacier-wide annual liquid precipitation |
 | `ELA` | (m a.s.l.) | Equilibrium line altitude |
 | `AAR` | (%) | Accumulation area ratio |
 | `Refreezing_sfc` | (m w.e.) | Glacier-wide annual refreezing |
 | `Hmin` | (m a.s.l.) | Minimum glacier surface elevation (terminus) |
 | `Frontal_ablation` | (m w.e.) | Specific frontal ablation (marine-terminating glaciers) |
-| `Discharge` | (m³ s⁻¹) | Total catchment discharge |
-| `Discharge_gl` | (m³ s⁻¹) | Glacier contribution to discharge |
+| `Discharge` | (m/yr) | Total catchment discharge |
+| `Discharge_gl` | (m/yr) | Glacier contribution to discharge |
 
 ---
 
 ## Extended output (`full_output = 'y'`)
 
 Setting `full_output = 'y'` adds daily resolved variables to the output:
+
+**Monthly model — additional variables:**
+
+| Variable | Unit | Description |
+|----------|------|-------------|
+| `Discharge_gl` | (m/month) | Monthly Discharge evolving glacier area |
+| `Discharge` | (m/month) | Monthly Discharge  intial glacier area |
+
 
 **Daily model — additional variables:**
 
@@ -60,8 +68,8 @@ Setting `full_output = 'y'` adds daily resolved variables to the output:
 | `Snowmelt_day` | (mm/day) | Daily snowmelt |
 | `Icemelt_day` | (mm/day) | Daily ice and firn melt |
 | `Refreezing_day` | (mm/day) | Daily refreezing |
-| `Discharge_gl` | (mm/day) | Daily refreezing |
-| `Discharge` | (mm/day) | Daily refreezing |
+| `Discharge_gl` | (mm/day) | Daily Discharge evolving glacier area |
+| `Discharge` | (mm/day) | Daily Discharge  intial glacier area |
 | `Snowline_day` | (m a.s.l.) | Daily transient snowline altitude |
 
 ```{note}
