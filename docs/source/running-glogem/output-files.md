@@ -66,10 +66,10 @@ Setting `full_output = 'y'` adds monthly or daily resolved variables to the outp
 | Variable | Unit | Description |
 |----------|------|-------------|
 | `Accumulation_day` | (m w.e.) | Daily accumulation |
-| `Rain_day` | (m w.e.) | Daily liquid precipitation |
-| `Snowmelt_day` | (m w.e.) | Daily snowmelt |
-| `Icemelt_day` | (m w.e.) | Daily ice and firn melt |
-| `Refreezing_day` | (m w.e.) | Daily refreezing |
+| `Rain_day` | (mm/day) | Daily liquid precipitation |
+| `Snowmelt_day` | (mm/day) | Daily snowmelt |
+| `Icemelt_day` | (mm/day) | Daily ice and firn melt |
+| `Refreezing_day` | (mm/day) | Daily refreezing |
 | `Snowline_day` | (m a.s.l.) | Daily transient snowline altitude |
 
 ```{note}
