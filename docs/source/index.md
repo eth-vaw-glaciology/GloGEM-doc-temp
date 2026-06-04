@@ -7,7 +7,7 @@ The model is forced by monthly or daily temperature and precipitation from reana
 
 If you want to refer to GloGEM in your publications or presentations, please refer to:
 
-**Huss, M. and Hock, R.: A new model for global glacier change and sea-level rise. Frontiers in Earth Science, 3, 5, https://www.doi.org/10.3389/feart.2015.00054, 2015**
+**Huss, M. and Hock, R.: A new model for global glacier change and sea-level rise. Frontiers in Earth Science, 3, 5, [doi:10.3389/feart.2015.00054](https://www.doi.org/10.3389/feart.2015.00054), 2015**
 
 ```{note}
 This documentation is under active development.
