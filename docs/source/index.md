@@ -48,6 +48,8 @@ model-description/discharge
 input-data/index
 input-data/climate-data
 input-data/geometric-data
+input-data/ancillary-data
+input-data/calibration-data
 ```
 
 ```{toctree}
