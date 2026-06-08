@@ -15,6 +15,10 @@ The test covers:
 - daily model calibration and hindcast (1991–2020)
 - monthly model calibration and hindcast (1991–2020)
 
+Calibration finds the glacier-specific parameters; the hindcast then runs
+the full period with those parameters to produce time series that can be
+compared against observations.
+
 Expected total runtime: **~70 seconds** on a modern workstation.
 
 ---
