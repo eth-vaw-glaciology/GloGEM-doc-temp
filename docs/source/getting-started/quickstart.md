@@ -191,12 +191,23 @@ test/test_aletsch.idlnb
 ```
 
 The notebook auto-detects its own location — no path setup is needed.
-It reads the outputs from `test/outputs/` and produces:
+It reads the outputs from `test/outputs/` and produces four plots:
 
-1. Annual mass balance time series for both glaciers (daily)
-2. Equilibrium line altitude and accumulation area ratio (daily)
-3. Daily vs monthly comparison for both glaciers
-4. Bar chart of calibrated DDF and c_prec values
+**Plot 1 — Annual mass balance (1991–2020)**
+
+![Annual mass balance time series for Aletsch and Morteratsch](../images/quickstart/plot1_annual_mb.png)
+
+**Plot 2 — Equilibrium line altitude and accumulation area ratio (daily)**
+
+![ELA and AAR for Aletschgletscher](../images/quickstart/plot2_ela_aar.png)
+
+**Plot 3 — Daily vs monthly model comparison**
+
+![Daily vs monthly mass balance for both glaciers](../images/quickstart/plot3_daily_vs_monthly.png)
+
+**Plot 4 — Calibrated parameters**
+
+![Bar chart of DDFsnow, DDFice and c_prec for both glaciers and both time resolutions](../images/quickstart/plot4_calibrated_params.png)
 
 It also runs 11 automated sanity checks. All should pass if the model is
 set up correctly.
