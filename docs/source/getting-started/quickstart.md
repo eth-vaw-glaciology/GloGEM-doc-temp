@@ -31,10 +31,11 @@ cd GloGEM
 
 ## Step 1 — Daily calibration
 
-Copy the test config to the repository root and run the model:
+Copy the test config to the repository root, then start IDL and run the model:
 
 ```bash
 cp test/config_aletsch_daily_calib.pro config.pro
+idl
 ```
 
 ```idl
@@ -72,13 +73,22 @@ Typical calibrated values:
 
 ---
 
+```{note}
+Keep the IDL session open for Steps 2–4.
+For each step, copy the new config in your **terminal** and then re-run
+`.r glogem` in the **IDL prompt** — no need to restart IDL.
+```
+
 ## Step 2 — Daily hindcast
 
-Using the calibrated parameters from Step 1, run the full 1991–2020 time series:
+Using the calibrated parameters from Step 1, run the full 1991–2020 time series.
+In your terminal:
 
 ```bash
 cp test/config_aletsch_daily_hindcast.pro config.pro
 ```
+
+Then in IDL:
 
 ```idl
 .r glogem
@@ -108,9 +118,13 @@ test/outputs/daily/CentralEurope/PAST/PAST_original/
 
 ## Step 3 — Monthly calibration
 
+In your terminal:
+
 ```bash
 cp test/config_aletsch_monthly_calib.pro config.pro
 ```
+
+Then in IDL:
 
 ```idl
 .r glogem
@@ -139,9 +153,13 @@ Typical calibrated values:
 
 ## Step 4 — Monthly hindcast
 
+In your terminal:
+
 ```bash
 cp test/config_aletsch_monthly_hindcast.pro config.pro
 ```
+
+Then in IDL:
 
 ```idl
 .r glogem
