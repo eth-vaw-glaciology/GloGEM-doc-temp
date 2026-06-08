@@ -19,6 +19,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'myst_parser',
+    'sphinx_copybutton',
 ]
 
 myst_enable_extensions = [
