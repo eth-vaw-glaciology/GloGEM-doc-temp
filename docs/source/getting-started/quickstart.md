@@ -1,4 +1,6 @@
-# Quickstart — test run on Aletsch & Morteratsch
+# Quickstart — test run
+
+**Test run on Aletsch & Morteratsch**
 
 This guide runs GloGEM on two well-measured Swiss Alpine glaciers using a
 minimal dataset that is **bundled with the repository**. No access to
@@ -74,9 +76,9 @@ Typical calibrated values:
 ---
 
 ```{note}
-Keep the IDL session open for Steps 2–4.
-For each step, copy the new config in your **terminal** and then re-run
-`.r glogem` in the **IDL prompt** — no need to restart IDL.
+After each step, exit IDL (`exit`), copy the next config in your terminal,
+and relaunch IDL with `.r glogem`.
+Restarting avoids stale variables from the previous run carrying over.
 ```
 
 ## Step 2 — Daily hindcast
