@@ -187,7 +187,7 @@ After completing all four runs, open the visualisation notebook in VS Code
 (requires the IDL extension):
 
 ```
-test/test_aletsch.idlnb
+test/visualise_test_results.idlnb
 ```
 
 The notebook auto-detects its own location — no path setup is needed.
