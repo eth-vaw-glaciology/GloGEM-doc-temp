@@ -62,7 +62,7 @@ running-glogem/run-modes
 running-glogem/region-selection
 running-glogem/gcm-configuration
 running-glogem/settings-reference
-running-glogem/output-files
+running-glogem/output-options
 ```
 
 ```{toctree}
