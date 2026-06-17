@@ -24,4 +24,4 @@ At startup, GloGEM:
 - [Region selection](region-selection.md) — selecting regions, single glaciers, and catchments
 - [GCM configuration](gcm-configuration.md) — selecting models, SSPs, and batch setup
 - [Settings reference](settings-reference.md) — complete list of configurable settings
-- [Output files](output-files.md) — output directory structure and variables
+- [Output options](output-options.md) — output options, directory structure and variables
