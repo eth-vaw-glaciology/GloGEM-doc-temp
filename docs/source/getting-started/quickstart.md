@@ -14,12 +14,15 @@ external data shares is required.
 The test covers:
 - daily model calibration and hindcast (1991–2020)
 - monthly model calibration and hindcast (1991–2020)
+- daily and monthly GCM projection to 2100 (GlacierMIP4, MRI-ESM2-0, ssp126)
 
 Calibration finds the glacier-specific parameters; the hindcast then runs
 the full period with those parameters to produce time series that can be
-compared against observations.
+compared against observations. The projection runs exercise the model's
+GCM-driven forward-simulation path, including glacier retreat, using a
+single bundled GCM/scenario combination.
 
-Expected total runtime: **~70 seconds** on a modern workstation.
+Expected total runtime: **~90 seconds** on a modern workstation.
 
 ---
 
@@ -181,17 +184,108 @@ FINISHED region !!! centraleurope !!!
 
 ---
 
+## Step 5 — Daily projection
+
+Using the calibrated parameters from Step 1, run a GCM-driven projection
+to 2100. In your terminal:
+
+```bash
+cp test/config_aletsch_daily_projection.pro config.pro
+```
+
+Then in IDL:
+
+```idl
+.r glogem
+```
+
+This uses a single bundled GlacierMIP4 model/scenario combination
+(**MRI-ESM2-0 / ssp126**) and enables `glacier_retreat = 'y'`, so glacier
+area and volume evolve dynamically over the 21st century — the main
+functionality the calibration and hindcast steps don't exercise.
+
+**Expected output** (~20 s):
+
+```
+We are running GloGEM daily
+Running for the future ...
+Catchment selection: Aletsch_Morteratsch
+MIP scenario selected: GMIP4
+...
+FINISHED region !!! centraleurope !!!
+    calculated with GCM: MRI-ESM2-0 / ssp126
+```
+
+Annual time-series files are written to:
+
+```
+test/outputs/daily/CentralEurope/files/files_original/MRI-ESM2-0/ssp126/
+  centraleurope_Annual_Balance_sfc_r1_Aletsch_Morteratsch.dat
+  centraleurope_Area_r1_Aletsch_Morteratsch.dat
+  centraleurope_Volume_r1_Aletsch_Morteratsch.dat
+  ... (one file per output variable)
+```
+
+Typical projected area change (1991 → 2099):
+
+| Glacier | Area 1991 (km²) | Area 2099 (km²) | Loss |
+|---------|------------------|------------------|------|
+| Aletsch | 81.8 | 42.4 | 48% |
+| Morteratsch | 15.8 | 6.6 | 58% |
+
+---
+
+## Step 6 — Monthly projection
+
+In your terminal:
+
+```bash
+cp test/config_aletsch_monthly_projection.pro config.pro
+```
+
+Then in IDL:
+
+```idl
+.r glogem
+```
+
+Same GCM/scenario and settings as Step 5, at monthly resolution.
+
+**Expected output** (~2 s):
+
+```
+We are running GloGEM monthly
+Running for the future ...
+MIP scenario selected: GMIP4
+FINISHED region !!! centraleurope !!!
+    calculated with GCM: MRI-ESM2-0 / ssp126
+```
+
+```{note}
+The bundled projection test data covers only MRI-ESM2-0 / ssp126 for the
+CentralEurope grid cells nearest Aletsch and Morteratsch. Changing
+`GCM_model_idx` or `GCM_rcp_idx` in these configs will fail with a file-not-found
+error unless you also provide the corresponding climate data under
+`test/climatedata/future/`. For other models/scenarios, point `dir_clim` at a
+full climate data share instead — see [GCM configuration](../running-glogem/gcm-configuration.md).
+```
+
+---
+
 ## Visualising results
 
-After completing all four runs, open the visualisation notebook in VS Code
-(requires the IDL extension):
+After completing all six runs, open the visualisation notebook in Jupyter
+(or VS Code / any Jupyter-compatible editor). It only needs `numpy` and
+`matplotlib` — no IDL required:
 
-```
-test/visualise_test_results.idlnb
+```bash
+cd test
+jupyter notebook visualise_test_results.ipynb
 ```
 
-The notebook auto-detects its own location — no path setup is needed.
-It reads the outputs from `test/outputs/` and produces four plots:
+The notebook auto-detects the test directory from the current working
+directory — run it from `test/` (or open it there in your editor).
+It reads the outputs from `test/outputs/` and produces five plots:
 
 **Plot 1 — Annual mass balance (1991–2020)**
 
@@ -209,7 +303,11 @@ It reads the outputs from `test/outputs/` and produces four plots:
 
 ![Bar chart of DDFsnow, DDFice and c_prec for both glaciers and both time resolutions](../images/quickstart/plot4_calibrated_params.png)
 
-It also runs 11 automated sanity checks. All should pass if the model is
+**Plot 5 — Projected glacier area to 2100**
+
+![Projected glacier area 1991-2100 for both glaciers and both time resolutions](../images/quickstart/plot5_projected_area.png)
+
+It also runs 13 automated sanity checks. All should pass if the model is
 set up correctly.
 
 ---
@@ -217,15 +315,24 @@ set up correctly.
 ## Expected sanity check results
 
 ```
-PASS  Aletsch   daily  Ba:  -1.167  [expected -1.50 to -0.80]
-PASS  Morteratsch daily  Ba:  -0.968  [expected -1.40 to -0.50]
-PASS  Aletsch   monthly Ba:  -1.169  [expected -1.50 to -0.80]
-PASS  Morteratsch monthly Ba:  -0.980  [expected -1.40 to -0.50]
-PASS  Aletsch daily DDFsnow:   3.606  [expected  1.50 to  7.50]
-PASS  Aletsch daily DDFice:    7.212  [expected  3.00 to 15.00]
-PASS  Aletsch   daily  mean Ba 2000-2020:  -1.xxx  [expected -1.50 to -0.80]
+PASS  Aletsch   daily  Ba:  -1.153  [expected -1.50 to -0.80]
+PASS  Morteratsch daily  Ba:  -1.038  [expected -1.40 to -0.50]
+PASS  Aletsch   monthly Ba:  -1.145  [expected -1.50 to -0.80]
+PASS  Morteratsch monthly Ba:  -0.976  [expected -1.40 to -0.50]
+PASS  Aletsch daily DDFsnow:   4.500  [expected  1.50 to  7.50]
+PASS  Aletsch daily DDFice:    9.000  [expected  3.00 to 15.00]
+PASS  Aletsch   daily  mean Ba 2000-2020:  -1.146  [expected -1.50 to -0.80]
 ...
-11 / 11 checks passed — the model is working correctly!
+PASS  Aletsch     2100 area loss (%, daily):  48.140  [expected 15 to 90]
+PASS  Morteratsch 2100 area loss (%, daily):  58.265  [expected 15 to 90]
+
+13 / 13 checks passed — the model is working correctly!
+```
+
+```{note}
+Exact values vary slightly between runs and IDL/library versions — the
+sanity checks use tolerance ranges rather than exact matches, so small
+differences from the numbers above are expected and not a cause for concern.
 ```
 
 ---
@@ -241,9 +348,10 @@ test-specific lines uncommented. Compared to default settings, the tests change:
 | `main_dir`, `dir`, `dir_clim` | `base_dir + '/test/...'` | use bundled minimal dataset |
 | `RGIversion` | `'7'` | required for bundled band files |
 | `catchment_selection` | `'Aletsch_Morteratsch'` | two-glacier subset |
-| `tran` | `[1991, 2020]` | shorter period matching bundled climate data |
-| `glacier_retreat` | `'n'` | disabled — no retreat geometry data bundled |
+| `tran` | `[1991, 2020]` (calib/hindcast) or `[1991, 2100]` (projection) | matches bundled climate data / full projection horizon |
+| `glacier_retreat` | `'n'` (calib/hindcast), `'y'` (projection) | retreat isn't relevant over the short historical window, and is the main thing the projection steps demonstrate |
 | `frontal_ablation` | `'n'` | disabled — no calving for these land-terminating glaciers |
+| `MIP`, `GCM_model_idx`, `GCM_rcp_idx` | `'GMIP4'`, `[5]`, `[1]` (projection only) | selects the single bundled GCM/scenario combination (MRI-ESM2-0 / ssp126) |
 
 All paths use `base_dir` (set automatically by `glogem.pro` from the
 current working directory), so the configs work regardless of where the
@@ -254,9 +362,18 @@ repository is cloned.
 ## Troubleshooting
 
 **"Parameter-File for centraleurope is not available"**
-: Run Step 1 (daily calibration) before Step 2 (daily hindcast), and
-  Step 3 (monthly calibration) before Step 4 (monthly hindcast). The
-  hindcast reads calibration parameters produced by the preceding step.
+: Run Step 1 (daily calibration) before Step 2 (daily hindcast) or Step 5
+  (daily projection), and Step 3 (monthly calibration) before Step 4
+  (monthly hindcast) or Step 6 (monthly projection). The hindcast and
+  projection steps both read calibration parameters produced by the
+  preceding calibration step.
+
+**"Error opening file" for a `clim_<lon>_<lat>.dat` path under `future/`**
+: The projection configs (Steps 5–6) only bundle climate data for a single
+  GCM/scenario (MRI-ESM2-0 / ssp126) and only for the grid cells nearest
+  Aletsch and Morteratsch. Don't change `GCM_model_idx`/`GCM_rcp_idx` in
+  these test configs without also adding the matching data under
+  `test/climatedata/future/`.
 
 **Model finishes but output files are missing**
 : Check the log file in `logs/` for errors. Common causes are incorrect
